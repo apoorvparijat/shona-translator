@@ -4,12 +4,10 @@ OpenAI Shona Translator - Uses OpenAI GPT models for English to Shona DOCX trans
 """
 
 import os
-import re
-import time
 import logging
-from typing import List, Dict, Optional
-from docx import Document
+from typing import Optional
 from dotenv import load_dotenv
+from base_translator import BaseShonaTranslator
 
 # Try to import OpenAI
 try:
@@ -26,10 +24,12 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-class OpenAIShonaTranslator:
-    """English to Shona translator using OpenAI GPT models"""
+class OpenAIShonaTranslator(BaseShonaTranslator):
+    """English to Shona translator using OpenAI GPT models with shared glossary"""
     
-    def __init__(self):
+    def __init__(self, glossary_dir: str = "glossary"):
+        super().__init__(glossary_dir)
+        
         self.client = None
         self.model = "gpt-3.5-turbo"  # Using GPT-3.5-turbo for cost efficiency
         
@@ -78,21 +78,17 @@ Translate the following text from English to Shona:"""
 
         logger.info("OpenAI Shona Translator initialized")
     
-    def translate_with_openai(self, text: str) -> str:
+    def _translate_with_api(self, text: str) -> Optional[str]:
         """Translate text using OpenAI API"""
-        if not text.strip():
-            return text
-        
-        # Skip very short or numeric-only text
-        if len(text.strip()) < 2 or re.match(r'^[\d\s\W]+$', text.strip()):
-            return text
-        
         try:
+            # Preprocess the text using shared glossary manager
+            processed_text = self.glossary_manager.preprocess_text(text)
+            
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[
                     {"role": "system", "content": self.system_prompt},
-                    {"role": "user", "content": text}
+                    {"role": "user", "content": processed_text}
                 ],
                 max_tokens=1000,
                 temperature=0.3,  # Lower temperature for more consistent translations
@@ -106,115 +102,42 @@ Translate the following text from English to Shona:"""
                 return translated_text
             else:
                 logger.warning(f"OpenAI returned same text for: {text[:50]}...")
-                return text
+                return None
                 
         except Exception as e:
             logger.error(f"OpenAI API error: {e}")
-            return text
+            return None
     
-    def translate_paragraph(self, paragraph) -> None:
-        """Translate a paragraph while preserving formatting"""
-        if not paragraph.text.strip():
-            return
-        
-        # Store original formatting
-        runs = list(paragraph.runs)
-        original_text = paragraph.text
-        
-        # Translate the text
-        translated_text = self.translate_with_openai(original_text)
-        
-        # Clear the paragraph
-        paragraph.clear()
-        
-        # Add translated text with preserved formatting
-        if runs:
-            new_run = paragraph.add_run(translated_text)
-            # Copy formatting from the first run
-            if runs[0].bold is not None:
-                new_run.bold = runs[0].bold
-            if runs[0].italic is not None:
-                new_run.italic = runs[0].italic
-            if runs[0].underline is not None:
-                new_run.underline = runs[0].underline
-            if runs[0].font.name:
-                new_run.font.name = runs[0].font.name
-            if runs[0].font.size:
-                new_run.font.size = runs[0].font.size
-        else:
-            paragraph.add_run(translated_text)
-        
-        # Add delay to respect rate limits
-        time.sleep(0.5)
-    
-    def translate_table(self, table) -> None:
-        """Translate table content while preserving structure"""
-        for row in table.rows:
-            for cell in row.cells:
-                for paragraph in cell.paragraphs:
-                    self.translate_paragraph(paragraph)
-    
-    def translate_docx(self, input_file: str, output_file: str) -> bool:
-        """Translate a DOCX file from English to Shona using OpenAI"""
-        try:
-            logger.info(f"Starting OpenAI translation of {input_file}")
-            
-            # Load the document
-            doc = Document(input_file)
-            
-            # Translate main document paragraphs
-            logger.info("Translating paragraphs...")
-            total_paragraphs = len([p for p in doc.paragraphs if p.text.strip()])
-            
-            for i, paragraph in enumerate(doc.paragraphs):
-                if paragraph.text.strip():
-                    logger.info(f"Translating paragraph {i+1}/{total_paragraphs}")
-                    self.translate_paragraph(paragraph)
-            
-            # Translate tables
-            logger.info("Translating tables...")
-            for i, table in enumerate(doc.tables):
-                logger.info(f"Translating table {i+1}/{len(doc.tables)}")
-                self.translate_table(table)
-            
-            # Save the translated document
-            doc.save(output_file)
-            logger.info(f"OpenAI translation completed. Saved to {output_file}")
-            return True
-            
-        except Exception as e:
-            logger.error(f"Error translating document: {e}")
-            return False
+    def _get_rate_limit_delay(self) -> float:
+        """Get the rate limit delay for OpenAI API"""
+        return 0.5  # OpenAI needs more delay due to rate limits
 
 def main():
     """Main function to run the OpenAI translator"""
     try:
         translator = OpenAIShonaTranslator()
         
-        # Input and output files
-        input_file = "collection-tools.docx"
-        output_file = "collection-tools_shona_openai.docx"
+        # Example usage - this is just for demonstration
+        # In practice, use the CLI tool: python shona_translate.py input.docx --method openai
+        print("🤖 OpenAI Shona Translator")
+        print("Use the CLI tool for file translation:")
+        print("  python shona_translate.py input.docx --method openai")
         
-        if not os.path.exists(input_file):
-            print(f"Error: Input file '{input_file}' not found.")
-            return
+        # Print translator info
+        info = translator.get_translator_info()
+        print(f"\n📊 Translator Info:")
+        print(f"   Type: {info['translator_type']}")
+        print(f"   Rate limit delay: {info['rate_limit_delay']}s")
+        print(f"   Glossary stats: {info['glossary_stats']}")
+        print(f"   Model: {translator.model}")
         
-        print(f"🤖 Starting OpenAI translation of '{input_file}' from English to Shona...")
-        print("⚡ Using GPT-3.5-turbo for high-quality translation")
-        print("This may take a while due to API rate limits...")
-        
-        success = translator.translate_docx(input_file, output_file)
-        
-        if success:
-            print(f"✅ OpenAI translation completed successfully!")
-            print(f"📄 Translated document saved as: {output_file}")
-            print("\n🔍 OpenAI Translation Features:")
-            print("- Context-aware AI translation")
-            print("- Medical/technical terminology expertise")
-            print("- Professional tone preservation")
-            print("- Maintained document formatting")
-        else:
-            print("❌ OpenAI translation failed. Check the logs for details.")
+        print("\n🔍 OpenAI Translation Features:")
+        print("- Context-aware AI translation")
+        print("- Shared glossary for deterministic terms")
+        print("- Abbreviation preprocessing")
+        print("- Post-processing error correction")
+        print("- Professional tone preservation")
+        print("- Maintained document formatting")
     
     except Exception as e:
         print(f"❌ Failed to initialize OpenAI translator: {e}")

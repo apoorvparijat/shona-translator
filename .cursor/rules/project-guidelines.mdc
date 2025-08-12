@@ -1,0 +1,16 @@
+---
+alwaysApply: true
+---
+
+# Overview
+
+This project is a Shona Translator.
+It uses 3 translation methods:
+
+- MyMemory API
+- Google Translate API
+- OpenAI API
+
+# Doc Guidelines
+
+Always create docs in /tech-plans folder.

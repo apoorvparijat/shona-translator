@@ -4,12 +4,13 @@ A high-accuracy English to Shona DOCX translation tool that preserves document f
 
 ## Features
 
-- 🌍 **High-accuracy translation** using multiple translation services
+- 🌍 **Multiple translation services**: MyMemory (free), Google Translate (free), OpenAI GPT (paid)
 - 📄 **Preserves DOCX formatting** (bold, italic, tables, etc.)
-- 🔄 **Dual translation engine**: Google Translate + OpenAI (optional)
+- 🔧 **Shared glossary system** with consistent terminology
+- 🚫 **Exclusion list** for brand names, proper nouns, and specific terms
 - 📊 **Table support** - translates content within tables
 - 🎯 **Context-aware** translation with OpenAI integration
-- ⚡ **Batch processing** ready
+- ⚡ **Command-line interface** for easy usage
 
 ## Installation
 
@@ -28,26 +29,42 @@ cp .env.example .env
 
 ## Usage
 
-### Basic Translation
+### Command Line Interface
 
 ```bash
-python shona_translator.py
+# Translate using default method (MyMemory)
+python shona_translate.py document.docx
+
+# Translate using specific method
+python shona_translate.py document.docx --method google
+
+# Translate using multiple methods
+python shona_translate.py document.docx --method google,openai,mymemory
+
+# List available methods
+python shona_translate.py --list-methods
 ```
 
-This will translate `collection-tools.docx` to `collection-tools_shona.docx`.
+For detailed CLI usage, see [README_CLI.md](README_CLI.md).
 
-### Custom Files
+### Programmatic Usage
 
-Edit the `input_file` and `output_file` variables in `main()` function or modify the script for command-line arguments.
+```python
+from translators.mymemory_translator import MyMemoryShonaTranslator
+
+translator = MyMemoryShonaTranslator()
+success = translator.translate_docx("input.docx", "output.docx")
+```
 
 ## Translation Quality
 
-The tool uses a dual-engine approach for maximum accuracy:
+The tool uses a multi-engine approach with shared glossary for maximum accuracy:
 
-1. **Google Translate**: Primary translation service (no API key required)
-2. **OpenAI GPT-4**: Context-aware translation (requires API key, optional)
+1. **MyMemory**: Free translation service (default)
+2. **Google Translate**: Fast and reliable (free)
+3. **OpenAI GPT**: Highest quality, context-aware (paid)
 
-When both services are available, the tool compares translations and selects the most contextually appropriate one.
+All translators use the same shared glossary system for consistent terminology and include an exclusion list for terms that should not be translated.
 
 ## Supported Features
 
