@@ -1,2 +1,4 @@
 .env
 input-files/*.docx
+
+.DS_Store
