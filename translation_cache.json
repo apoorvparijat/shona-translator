@@ -6063,11 +6063,165 @@
         "first_seen": 1755018350.4084995,
         "last_updated": 1755018350.408504
       }
+    },
+    "a06681478316b7c3ca16e63d4b71db93": {
+      "original_text": "Hello, how are you?",
+      "translations": {
+        "agent": {
+          "text": "Mhoro, muri sei?",
+          "confidence": 0.9,
+          "timestamp": 1755020177.0094411
+        }
+      },
+      "metadata": {
+        "first_seen": 1755020177.009435,
+        "last_updated": 1755020177.0094411
+      }
+    },
+    "ca026ec3f44c79a66730a88ebfd07887": {
+      "original_text": "Hello, thank you very much for taking the time to complete this survey. My name is ______ and I work for _____________.",
+      "translations": {
+        "agent": {
+          "text": "Mhoro, ndatenda zvikuru nekutora nguva yekupedzisa ongororo iyi. Zita rangu ndinonzi ______ uye ndinoshanda ku _____________.",
+          "confidence": 0.9,
+          "timestamp": 1755020193.168017
+        }
+      },
+      "metadata": {
+        "first_seen": 1755020193.168013,
+        "last_updated": 1755020193.168017
+      }
+    },
+    "5cb33a70e775180ac9e6e6551c16bf99": {
+      "original_text": "Hello, thank you very much for taking the time to complete this survey. My name is  ______ and I work for _____________. The survey should take no longer than 10-15 minutes to complete. As a reminder, this survey is to help the Neotree team better understand your expectations as healthcare workers in the labour and neonatal units for an improved clinical decision system, which will be supported by artificial intelligence methodologies.",
+      "translations": {
+        "agent": {
+          "text": "Mhoro, ndatenda zvikuru nekutora nguva yako kuti upedze ongororo iyi. Zita rangu ndinonzi ______ uye ndinoshanda ku_____________. Ongororo iyi haifaniri kutora nguva inokunda maminitsi 10-15 kupedza. Sechiyeuchidzo, ongororo iyi ndeyekubatsira chikwata cheNeotree kunzwisisa zvaunotarisira semushandi vehutano mumapoka ebasa rekuberekesa nevana vachangoberekwa kuti ive hurongwa hwesarudzo yekiriniki hwakavandudzwa, iyo ichatsigirwa nemaitiro ohuchenjeri hwekugadzira.",
+          "confidence": 0.9,
+          "timestamp": 1755020326.357696
+        }
+      },
+      "metadata": {
+        "first_seen": 1755020326.357693,
+        "last_updated": 1755020326.357696
+      }
+    },
+    "cafb9bdd26515ab7c6d10ae369ec6e6a": {
+      "original_text": "Hello, thank you very much for taking the time to speak to me today. My name is  ______ and I work for _____________. The discussion will probably last 1 hour. In this focus group discussion, we would like you to share our observations with you on the use of Neotree’s clinical decision support system, as well as clarify certain observations. There are no right or wrong answers. We are trying to understand your preferences with regards to the system.",
+      "translations": {
+        "agent": {
+          "text": "Mhoro, ndatenda zvikuru nekutora nguva kutaura neni nhasi. Zita rangu ndi______ uye ndinoshandira _____________. Nhaurirano iyi ingangotora awa rimwe chete. Muboka rekutarisa, tinoda kugoverana kucherechedza kwedu nemi pamusoro pekushandiswa kweNeotree’s rutsigiro rwesarudzo yekiriniki, pamwe nekutsanangura zvimwe zvacherechedzwa. Hapana mhinduro yekororo kana yakaipa. Tiri kuyedza kunzwisisa zvamunofarira maererano nehurongwa.",
+          "confidence": 0.9,
+          "timestamp": 1755020694.367368
+        }
+      },
+      "metadata": {
+        "first_seen": 1755020694.367363,
+        "last_updated": 1755020694.367369
+      }
+    },
+    "c1b3dd3f2b92d2b89703ac707ed4762e": {
+      "original_text": "I am interested in your views and to hear about your experiences regarding the use of the Clinical Decision Support functionality in the Neotree program at [health facility]. Your opinions as a health care worker at the frontline of newborn care is very important to us. There are no right or wrong answers to these questions, just differing points of views. Keep in mind that we're just as interested in negative comments as positive comments.",
+      "translations": {
+        "agent": {
+          "text": "Ndiri kufarira maonero enyu uye kunzwa nezveruzivo rwenyu nezvekushandiswa kwerutsigiro rwesarudzo yekiriniki mukushanda kweNeotree panzvimbo yehutano. Maonero enyu sevashandi vehutano vari pamberi pekuchengeta vana vachangoberekwa anokosha kwatiri zvikuru. Hapana mhinduro dzakarurama kana dzisina kururama kumibvunzo iyi, asi kungoti pwumvura yakasiyana siyana. Ramba uchifunga kuti tinofarira zvakafanana makomendi asina kunaka sezvavanoita dzakanaka.",
+          "confidence": 0.9,
+          "timestamp": 1755020700.276405
+        }
+      },
+      "metadata": {
+        "first_seen": 1755020700.276402,
+        "last_updated": 1755020700.276406
+      }
+    },
+    "65a1b685f41c9fd0d3136b22e063b9cf": {
+      "original_text": "Objective: Develop an ideal future state journey map of the AI-CDS system to facilitate integration with existing workflows and systems; initial brainstorming exercise to elicit ideas around outputs; discuss and agree on measures of usability and user experience of digital interventions, towards adapting the existing usability scale, appropriate for low resource settings",
+      "translations": {
+        "agent": {
+          "text": "Chinangwa: Kugadzira mepu yenzira yedambudziko remangwana remangwana reAI-CDS system kuti ibatsire mukubatanidzwa nemafambiro ebasa aripo nehurongwa; kushandira pamwe kwepfungwa kwekutanga kuti uwane mazano pamusoro pezvinobuda; kukurukura uye kubvumirana pamatanho ekushandiswa uye ruzivo rwemushandisi rwekuvhiringidzika kwedhijitari, kutarisa kuchinjisa chiyero cheruzivo rwekushanda, chakakodzera kune nzvimbo dzine zviwanikwa zvishoma",
+          "confidence": 0.9,
+          "timestamp": 1755020707.868126
+        }
+      },
+      "metadata": {
+        "first_seen": 1755020707.8681228,
+        "last_updated": 1755020707.868128
+      }
+    },
+    "a3c1561e948c22ac14d583f124ce38ec": {
+      "original_text": "Hello, thank you very much for taking the time to participate in this workshop. My name is  ______ and I work for _____________. The workshop will probably last about 4 hours. As a reminder, this workshop is to help the Neotree team better understand your experience with the Neotree application and the clinical decision support system, as well as generate ideas for the final outputs, and how it can better integrate into your workflow.  ",
+      "translations": {
+        "agent": {
+          "text": "Mhoro, ndatenda zvikuru nekutora nguva yenyu kuti mutore chikamu muworkshop iyi. Zita rangu ndiri ______ uye ndinoshanda ku______________. Workshop iyi inogona kutora anenge maawa mana. Sechiyeuchidzo, workshop iyi ndeyekubatsira chikwata cheNeotree kuti chinyatsogadzirisa ruzivo rwenyu neNeotree application nerutsigiro rwesarudzo yekiriniki, uyewo kugadzira mazano emhedzisiro yekupedzisira, uye kuti inogona sei kupinda mukufamba webasa renyu zviri nani.",
+          "confidence": 0.9,
+          "timestamp": 1755020712.829108
+        }
+      },
+      "metadata": {
+        "first_seen": 1755020712.8291042,
+        "last_updated": 1755020712.82911
+      }
+    },
+    "2c2a079de58ddfba0fc1211a4da784ce": {
+      "original_text": "Objective: Understand and map how healthcare workers envision the tech ideally fitting into their real-world workflows. Identify where it fits, where it adds value, where it may create friction, and what resources are required. Map timelines showing interactions between the staff and the tool, emphasising on bottlenecks identified through observation and discussion in Aim 2. ",
+      "translations": {
+        "agent": {
+          "text": "Chinangwa: Kunzwisisa uye kumaka nzira iyo vashandi vehutano vanofungidzira hunyanzvi hukaringana kupinda mumabasa avo epanyika chaiwo. Kuziva pakaringana, pakanowedzera kukosha, pakanogona kukonzera kusawirirana, uye kuti zviwanikwa zvipi zvinodiwa. Kumaka makore ekuratidza kubatana pakati pevashandi nechishandiso, vachisimbisa pane zvipingamupinyi zvakacherechedzwa kuburikidza necherechedzo uye nhaurirano muAim 2.",
+          "confidence": 0.9,
+          "timestamp": 1755020717.120826
+        }
+      },
+      "metadata": {
+        "first_seen": 1755020717.1208231,
+        "last_updated": 1755020717.120827
+      }
+    },
+    "925d0b81a6f2f5c333110381bc2cc5b6": {
+      "original_text": "Hello, thank you very much for taking the time to speak to me today. My name is  ______ and I work for _____________. The workshop will probably last 1 hour. In this workshop we would like you to explore different versions of the clinical decision support system as if you were using it in a real clinical situation. As you are using it, please say out loud everything you're thinking — what you’re looking at, what you expect to happen, what confuses or helps you. There are no right or wrong answers. We're testing the system, not you.",
+      "translations": {
+        "agent": {
+          "text": "Mhoro, ndatenda zvikuru nekutora nguva yekutaura neni nhasi. Zita rangu ndi ______ uye ndinoshanda ku_____________. Mutsangano uyu ungangotora awa imwe. Mumusangano uyu tinoda kuti muongorore shanduko dzakasiyana dzemaitirwo erutsigiro rwesarudzo yekiriniki sekunge muri kuishandisa mumamiriro chaiwo ekiriniki. Pamunenge muchishandisa, ndapota tauyiranai zvose zvamuri kufunga — zvamuri kutarisa, zvamunotarisira kuti zvigoitika, zvichikuvhiringidzai kana zvichikubatsirai. Hapana mhinduro dzakarurama kana dzisina kunaka. Tiri kuedza hurongwa, kwete imi.",
+          "confidence": 0.9,
+          "timestamp": 1755020723.889784
+        }
+      },
+      "metadata": {
+        "first_seen": 1755020723.8897831,
+        "last_updated": 1755020723.889785
+      }
+    },
+    "0c2323a7df949f94bc605967334866c0": {
+      "original_text": "What kinds of explanations or information did the nurses or doctors give you about your baby’s illness or treatment?",
+      "translations": {
+        "agent": {
+          "text": "Ndeapi marudzi etsananguro kana ruzivo zvakapihwa nemukoti kana chiremba pamusoro pehurwere hwemwana wenyu kana kurapwa kwakaitwa?",
+          "confidence": 0.9,
+          "timestamp": 1755020725.2828119
+        }
+      },
+      "metadata": {
+        "first_seen": 1755020725.282807,
+        "last_updated": 1755020725.282815
+      }
+    },
+    "050ec070ab2f4395b5d3f5ba65438045": {
+      "original_text": "Hello, thank you very much for taking the time to complete this survey. My name is  ______ and I work for _____________. There are two surveys and each should take no longer than 10-15 minutes to complete. The first survey seeks to understand your user experience with the final prototype of the clinical decision support system you tried recently. The second survey seeks to understand how easily you think the prototype can be integrated within this facility and your workflow.",
+      "translations": {
+        "agent": {
+          "text": "Mhoro, ndatenda zvikuru nekutora nguva yako kupedzisa ongororo iyi. Zita rangu ndi______ uye ndinoshanda ku_____________. Kune ongororo mbiri uye imwe neimwe inofanirwa kutora pasina anopfuura maminitsi 10-15 kuti ipedziswe. Ongororo yekutanga inokumbira kunzwisisa ruzivo rwako rwemushandisi nepurogiramu yekupedzisira yerutsigiro rwesarudzo yekiriniki yaedzwa nguva pfupi yadarika. Ongororo yechipiri inokumbira kunzwisisa kushandisika kwekufunga kwako kuti prototype iyi inogona kusanganiswa sei pano munzvimbo ino yehutano uye mukufamba nebasa rako.",
+          "confidence": 0.9,
+          "timestamp": 1755020731.247776
+        }
+      },
+      "metadata": {
+        "first_seen": 1755020731.2477708,
+        "last_updated": 1755020731.247778
+      }
     }
   },
   "stats": {
-    "hits": 380,
-    "misses": 450,
-    "total_requests": 830
+    "hits": 914,
+    "misses": 466,
+    "total_requests": 1380
   }
 }

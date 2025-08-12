@@ -32,7 +32,7 @@ class AgentShonaTranslator(BaseShonaTranslator):
         super().__init__(glossary_dir)
         
         self.client = None
-        self.model = "gpt-5"  # Using GPT-4o for better translation quality
+        self.model = "gpt-4o"  # Using GPT-4o for better translation quality
         
         if not OPENAI_AVAILABLE:
             raise ImportError("OpenAI library not installed. Please install with: pip install openai")
@@ -192,7 +192,7 @@ RESPONSE FORMAT:
                     {"role": "system", "content": self.system_prompt},
                     {"role": "user", "content": text}
                 ],
-                max_completion_tokens=2000,  # GPT-5 uses max_completion_tokens
+                max_completion_tokens=2000,  # GPT-4o uses max_completion_tokens
                 timeout=60  # Increased timeout for larger chunks
             )
             
