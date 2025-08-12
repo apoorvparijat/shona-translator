@@ -18,6 +18,7 @@ try:
     from mymemory_translator import MyMemoryShonaTranslator
     from google_translator import GoogleShonaTranslator
     from openai_translator import OpenAIShonaTranslator
+    from agent_translator import AgentShonaTranslator
     TRANSLATORS_AVAILABLE = True
 except ImportError as e:
     print(f"❌ Error importing translators: {e}")
@@ -35,7 +36,8 @@ class ShonaTranslateCLI:
         self.translators = {
             'mymemory': MyMemoryShonaTranslator,
             'google': GoogleShonaTranslator,
-            'openai': OpenAIShonaTranslator
+            'openai': OpenAIShonaTranslator,
+            'agent': AgentShonaTranslator
         }
     
     def validate_input_file(self, file_path: str) -> bool:
@@ -81,6 +83,7 @@ class ShonaTranslateCLI:
             print(f"📊 Translator: {info['translator_type']}")
             print(f"📊 Rate limit: {info['rate_limit_delay']}s")
             print(f"📊 Glossary terms: {info['glossary_stats']['medical_technical_terms']}")
+            print(f"📊 Cache stats: {info['cache_stats']['hit_rate']}% hit rate ({info['cache_stats']['hits']}/{info['cache_stats']['total_requests']})")
             
             # Perform translation
             success = translator.translate_docx(input_file, output_file)
@@ -177,7 +180,7 @@ Examples:
         '--method', '-m',
         default='mymemory',
         help='Translation method(s). Use comma-separated list for multiple methods. '
-             'Default: mymemory. Available: mymemory, google, openai'
+             'Default: mymemory. Available: mymemory, google, openai, agent'
     )
     
     parser.add_argument(

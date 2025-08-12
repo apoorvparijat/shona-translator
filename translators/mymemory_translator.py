@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 class MyMemoryShonaTranslator(BaseShonaTranslator):
     """English to Shona translator using MyMemory API with shared glossary"""
     
-    def __init__(self, glossary_dir: str = "glossary"):
+    def __init__(self, glossary_dir: str = "../glossary"):
         super().__init__(glossary_dir)
         
         # MyMemory API
@@ -46,11 +46,23 @@ class MyMemoryShonaTranslator(BaseShonaTranslator):
             if response.status_code == 200:
                 data = response.json()
                 if data.get('responseStatus') == 200:
-                    translated_text = data.get('responseData', {}).get('translatedText', text)
-                    if translated_text and translated_text.lower() != text.lower():
-                        return translated_text
-            
-            return None
+                    translated_text = data.get('responseData', {}).get('translatedText', '')
+                    
+                    # Validate the translation
+                    if translated_text and translated_text.strip():
+                        # Additional validation: check if translation is not just empty or whitespace
+                        if len(translated_text) > 0 and not translated_text.isspace():
+                            logger.info(f"MyMemory: '{text[:50]}...' -> '{translated_text[:50]}...'")
+                            return translated_text
+                        else:
+                            logger.warning(f"MyMemory returned empty/whitespace translation for: {text[:50]}...")
+                            return None
+                    else:
+                        logger.warning(f"MyMemory returned empty translation for: {text[:50]}...")
+                        return None
+            else:
+                logger.warning(f"MyMemory API returned status {response.status_code} for: {text[:50]}...")
+                return None
             
         except Exception as e:
             logger.error(f"MyMemory API error: {e}")

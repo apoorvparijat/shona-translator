@@ -31,7 +31,7 @@ except (ImportError, AttributeError) as e:
 class GoogleShonaTranslator(BaseShonaTranslator):
     """English to Shona translator using Google Translate API with shared glossary"""
     
-    def __init__(self, glossary_dir: str = "glossary"):
+    def __init__(self, glossary_dir: str = "../glossary"):
         super().__init__(glossary_dir)
         
         if not GOOGLE_AVAILABLE:
@@ -55,26 +55,83 @@ class GoogleShonaTranslator(BaseShonaTranslator):
             # Preprocess the text using shared glossary manager
             processed_text = self.glossary_manager.preprocess_text(text)
             
-            # Google Translate API call
+            logger.debug(f"Google Translate request - Original: '{text[:100]}...' -> Processed: '{processed_text[:100]}...'")
+            
+            # Google Translate API call - handle both sync and async versions
             result = self.translator.translate(processed_text, src='en', dest='sn')
             
-            if result and result.text and result.text.strip():
-                translated_text = result.text.strip()
-                if translated_text != text:
-                    logger.info(f"Google: '{text[:50]}...' -> '{translated_text[:50]}...'")
-                    return translated_text
+            # Check if result is a coroutine (async version)
+            if hasattr(result, '__await__'):
+                logger.debug(f"Google Translate returned coroutine, attempting to await...")
+                try:
+                    import asyncio
+                    # Create new event loop if none exists
+                    try:
+                        loop = asyncio.get_event_loop()
+                    except RuntimeError:
+                        loop = asyncio.new_event_loop()
+                        asyncio.set_event_loop(loop)
+                    
+                    # Await the coroutine
+                    result = loop.run_until_complete(result)
+                    logger.debug(f"Successfully awaited coroutine, result: {result}")
+                except Exception as await_error:
+                    logger.error(f"Failed to await coroutine: {await_error}")
+                    return None
+            
+            # Detailed result inspection
+            logger.debug(f"Google Translate result type: {type(result)}")
+            logger.debug(f"Google Translate result: {result}")
+            
+            if result:
+                logger.debug(f"Google Translate result attributes: {dir(result)}")
+                logger.debug(f"Google Translate result.text: {getattr(result, 'text', 'NO_TEXT_ATTR')}")
+                logger.debug(f"Google Translate result.src: {getattr(result, 'src', 'NO_SRC_ATTR')}")
+                logger.debug(f"Google Translate result.dest: {getattr(result, 'dest', 'NO_DEST_ATTR')}")
+                logger.debug(f"Google Translate result.origin: {getattr(result, 'origin', 'NO_ORIGIN_ATTR')}")
+                
+                if hasattr(result, 'text') and result.text:
+                    translated_text = result.text.strip()
+                    logger.debug(f"Google Translate translated_text: '{translated_text}'")
+                    
+                    # Validate the translation
+                    if translated_text and translated_text != processed_text:
+                        # Additional validation: check if translation is not just empty or whitespace
+                        if len(translated_text) > 0 and not translated_text.isspace():
+                            logger.info(f"Google: '{text[:50]}...' -> '{translated_text[:50]}...'")
+                            return translated_text
+                        else:
+                            logger.warning(f"Google returned empty/whitespace translation for: '{text[:100]}...' -> '{translated_text}'")
+                            return None
+                    else:
+                        logger.warning(f"Google returned same text or empty for: '{text[:100]}...' -> '{translated_text}' (processed: '{processed_text[:100]}...')")
+                        return None
                 else:
-                    logger.warning(f"Google returned same text for: {text[:50]}...")
+                    logger.warning(f"Google returned result without text attribute or empty text for: '{text[:100]}...'")
+                    logger.warning(f"Result object: {result}")
                     return None
             else:
-                logger.warning(f"Google returned empty translation for: {text[:50]}...")
+                logger.warning(f"Google returned None result for: '{text[:100]}...'")
                 return None
                 
         except Exception as e:
-            logger.error(f"Google Translate API error: {e}")
+            # Handle None text safely
+            text_preview = text[:100] if text else "None"
+            logger.error(f"Google Translate API error for text '{text_preview}...': {e}")
+            logger.error(f"Error type: {type(e)}")
+            logger.error(f"Error details: {str(e)}")
+            
+            # Check for specific error types
+            if "429" in str(e):
+                logger.error("Rate limit exceeded (HTTP 429) - Google Translate is throttling requests")
+            elif "403" in str(e):
+                logger.error("Access forbidden (HTTP 403) - Check if Google Translate is blocking requests")
+            elif "timeout" in str(e).lower():
+                logger.error("Request timeout - Network or service issue")
+            elif "connection" in str(e).lower():
+                logger.error("Connection error - Network issue")
+            
             return None
-    
-
     
     def _get_rate_limit_delay(self) -> float:
         """Get the rate limit delay for Google Translate API"""

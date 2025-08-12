@@ -28,9 +28,6 @@ class TestGoogleShonaTranslator(unittest.TestCase):
         
         # Create test glossary directory
         os.makedirs('glossary', exist_ok=True)
-        
-        # Initialize translator
-        self.translator = GoogleShonaTranslator()
     
     def tearDown(self):
         """Clean up after each test method"""
@@ -39,84 +36,144 @@ class TestGoogleShonaTranslator(unittest.TestCase):
     
     def test_google_translator_initialization(self):
         """Test that GoogleShonaTranslator initializes correctly"""
-        self.assertIsNotNone(self.translator)
-        self.assertEqual(self.translator._get_rate_limit_delay(), 0.2)
-        self.assertTrue(hasattr(self.translator, '_translate_with_api'))
+        with patch('google_translator.Translator') as mock_translator_class:
+            mock_translator = Mock()
+            mock_translator_class.return_value = mock_translator
+            
+            translator = GoogleShonaTranslator()
+            self.assertIsNotNone(translator)
+            self.assertEqual(translator._get_rate_limit_delay(), 0.2)
+            self.assertTrue(hasattr(translator, '_translate_with_api'))
     
     def test_get_translator_info(self):
         """Test that translator info is returned correctly"""
-        info = self.translator.get_translator_info()
-        
-        self.assertIsInstance(info, dict)
-        self.assertIn('translator_type', info)
-        self.assertIn('rate_limit_delay', info)
-        self.assertIn('glossary_stats', info)
-        
-        self.assertEqual(info['translator_type'], "GoogleShonaTranslator")
-        self.assertEqual(info['rate_limit_delay'], 0.2)
-        self.assertIsInstance(info['glossary_stats'], dict)
+        with patch('google_translator.Translator') as mock_translator_class:
+            mock_translator = Mock()
+            mock_translator_class.return_value = mock_translator
+            
+            translator = GoogleShonaTranslator()
+            info = translator.get_translator_info()
+            
+            self.assertIsInstance(info, dict)
+            self.assertIn('translator_type', info)
+            self.assertIn('rate_limit_delay', info)
+            self.assertIn('glossary_stats', info)
+            
+            self.assertEqual(info['translator_type'], "GoogleShonaTranslator")
+            self.assertEqual(info['rate_limit_delay'], 0.2)
+            self.assertIsInstance(info['glossary_stats'], dict)
     
-    @patch('google_translator.googletrans.Translator')
-    def test_translate_text_success(self, mock_translator_class):
+    def test_translate_text_success(self):
         """Test successful translation via Google Translate"""
-        # Mock successful translation
-        mock_translator = Mock()
-        mock_translator.translate.return_value.text = "Mhoro"
-        mock_translator_class.return_value = mock_translator
-        
-        result = self.translator._translate_with_api("Hello")
-        
-        self.assertEqual(result, "Mhoro")
-        mock_translator.translate.assert_called_once()
+        with patch('google_translator.Translator') as mock_translator_class:
+            # Mock successful translation
+            mock_translator = Mock()
+            mock_result = Mock()
+            mock_result.text = "Zvakanaka"
+            mock_translator.translate.return_value = mock_result
+            mock_translator_class.return_value = mock_translator
+            
+            translator = GoogleShonaTranslator()
+            result = translator._translate_with_api("Excellent")
+            
+            self.assertEqual(result, "Zvakanaka")
+            mock_translator.translate.assert_called_once()
     
-    @patch('google_translator.googletrans.Translator')
-    def test_translate_text_translation_error(self, mock_translator_class):
+    def test_get_best_translation_with_api_only(self):
+        """Test that API translation is used when glossary doesn't have the term"""
+        with patch('google_translator.Translator') as mock_translator_class:
+            # Mock successful translation
+            mock_translator = Mock()
+            mock_result = Mock()
+            mock_result.text = "Zvakanaka"
+            mock_translator.translate.return_value = mock_result
+            mock_translator_class.return_value = mock_translator
+            
+            translator = GoogleShonaTranslator()
+            # Test with a term that's not in the glossary
+            result = translator.get_best_translation("Excellent")
+            
+            # Should return the API translation
+            self.assertEqual(result, "Zvakanaka")
+            mock_translator.translate.assert_called_once()
+    
+    def test_translate_text_translation_error(self):
         """Test handling of translation errors"""
-        # Mock translation error
-        mock_translator = Mock()
-        mock_translator.translate.side_effect = Exception("Translation failed")
-        mock_translator_class.return_value = mock_translator
-        
-        result = self.translator._translate_with_api("Hello")
-        
-        # Should return None when translation fails
-        self.assertIsNone(result)
+        with patch('google_translator.Translator') as mock_translator_class:
+            # Mock translation error
+            mock_translator = Mock()
+            mock_translator.translate.side_effect = Exception("Translation failed")
+            mock_translator_class.return_value = mock_translator
+            
+            translator = GoogleShonaTranslator()
+            result = translator._translate_with_api("Excellent")
+            
+            # Should return None when translation fails
+            self.assertIsNone(result)
     
-    @patch('google_translator.googletrans.Translator')
-    def test_translate_text_initialization_error(self, mock_translator_class):
+    def test_get_best_translation_with_api_error(self):
+        """Test that API errors are handled correctly in get_best_translation"""
+        with patch('google_translator.Translator') as mock_translator_class:
+            # Mock translation error
+            mock_translator = Mock()
+            mock_translator.translate.side_effect = Exception("Translation failed")
+            mock_translator_class.return_value = mock_translator
+            
+            translator = GoogleShonaTranslator()
+            # Test with a term that's not in the glossary
+            result = translator.get_best_translation("Excellent")
+            
+            # Should return original text when API fails and glossary doesn't have it
+            self.assertEqual(result, "Excellent")
+    
+    def test_translate_text_initialization_error(self):
         """Test handling of translator initialization errors"""
-        # Mock initialization error
-        mock_translator_class.side_effect = Exception("Initialization failed")
-        
-        result = self.translator._translate_with_api("Hello")
-        
-        # Should return None when initialization fails
-        self.assertIsNone(result)
+        with patch('google_translator.Translator') as mock_translator_class:
+            # Mock initialization error
+            mock_translator_class.side_effect = Exception("Initialization failed")
+            
+            with self.assertRaises(Exception):
+                translator = GoogleShonaTranslator()
     
     def test_get_best_translation_with_glossary(self):
         """Test that glossary terms are handled correctly"""
-        # Test with a term that should be in the glossary
-        test_text = "version"
-        result = self.translator.get_best_translation(test_text)
-        
-        # Should return a string
-        self.assertIsInstance(result, str)
-        self.assertGreater(len(result), 0)
+        with patch('google_translator.Translator') as mock_translator_class:
+            mock_translator = Mock()
+            mock_translator_class.return_value = mock_translator
+            
+            translator = GoogleShonaTranslator()
+            # Test with a term that should be in the glossary
+            test_text = "version"
+            result = translator.get_best_translation(test_text)
+            
+            # Should return a string
+            self.assertIsInstance(result, str)
+            self.assertGreater(len(result), 0)
     
     def test_empty_text_handling(self):
         """Test handling of empty text"""
-        result = self.translator._translate_with_api("")
-        self.assertIsNone(result)
-        
-        result = self.translator._translate_with_api(None)
-        self.assertIsNone(result)
+        with patch('google_translator.Translator') as mock_translator_class:
+            mock_translator = Mock()
+            mock_translator_class.return_value = mock_translator
+            
+            translator = GoogleShonaTranslator()
+            result = translator._translate_with_api("")
+            self.assertIsNone(result)
+            
+            result = translator._translate_with_api(None)
+            self.assertIsNone(result)
     
     def test_language_detection(self):
         """Test that the translator uses correct language codes"""
-        # This test verifies that the translator is configured for English to Shona
-        # The actual language codes should be 'en' for English and 'sn' for Shona
-        # Note: These are hardcoded in the _translate_with_googletrans method
-        self.assertTrue(hasattr(self.translator, 'use_googletrans'))
+        with patch('google_translator.Translator') as mock_translator_class:
+            mock_translator = Mock()
+            mock_translator_class.return_value = mock_translator
+            
+            translator = GoogleShonaTranslator()
+            # This test verifies that the translator is configured for English to Shona
+            # The actual language codes should be 'en' for English and 'sn' for Shona
+            # Note: These are hardcoded in the _translate_with_googletrans method
+            self.assertTrue(hasattr(translator, 'translator'))
 
 
 if __name__ == '__main__':
