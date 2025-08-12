@@ -1,5 +1,7 @@
 # Shona Translator
 
+[![Tests](https://github.com/apoorvparijat/shona-translator/workflows/CI/badge.svg)](https://github.com/apoorvparijat/shona-translator/actions)
+
 A high-accuracy English to Shona DOCX translation tool that preserves document formatting and structure.
 
 ## Quick Start
