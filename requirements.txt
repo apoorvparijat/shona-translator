@@ -1,5 +1,5 @@
 python-docx==0.8.11
-googletrans==4.0.0-rc1
+googletrans==4.0.2
 openai>=1.98.0
 python-dotenv==1.0.0
 requests==2.31.0

@@ -18,10 +18,16 @@ A command-line interface for translating English DOCX documents to Shona using m
    pip install python-docx python-dotenv requests
    ```
 
-2. For Google Translate (optional):
+2. For Google Translate (required for Google method):
 
    ```bash
    pip install googletrans==4.0.0-rc1
+   ```
+
+   **Note**: If you encounter dependency conflicts, run:
+
+   ```bash
+   python fix_googletrans.py
    ```
 
 3. For OpenAI (optional):
@@ -139,8 +145,27 @@ All translators use the same shared glossary system for consistent terminology:
 - **Phrase Translations**: 9+ common phrases
 - **Abbreviations**: 10+ abbreviations (HCW, CDS, AI, NICU, etc.)
 - **Post-Processing**: 6+ error corrections
+- **Exclusion List**: 20+ terms that should not be translated (brand names, proper nouns, etc.)
 
 Glossary files are stored in `translators/glossary/` and can be edited directly.
+
+### Exclusion List
+
+The exclusion list prevents certain terms from being translated by the glossary system, including:
+
+- **Brand names**: Neotree, Neotree's
+- **Hospital names**: Sally Mugabe Central Hospital, Chinhoyi Provincial Hospital, etc.
+- **Technical abbreviations**: CDS, AI, NICU, NNU, DHIS2, EMRs, MoH
+- **Specific terms**: "Healthcare Systems Usability Scale for Clinical Decision Support Systems", "gut feeling", "Aim 2", etc.
+
+**Note**: The exclusion list only prevents glossary-based translation. API-based translation (Google Translate, OpenAI) may still translate these terms if the API service chooses to do so.
+
+To add new exclusions, edit `translators/glossary/exclusion_list.csv`:
+
+```csv
+term,reason
+new_term,Reason for exclusion
+```
 
 ## Error Handling
 
@@ -178,6 +203,7 @@ shona-translator/
 
 - Ensure you're running from the project root directory
 - Check that all required dependencies are installed
+- For Google Translate conflicts, run `python fix_googletrans.py`
 
 ### Translation Failures
 

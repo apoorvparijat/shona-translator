@@ -20,12 +20,14 @@ class GlossaryManager:
         self.phrase_translations: Dict[str, str] = {}
         self.abbreviations: Dict[str, str] = {}
         self.post_processing_corrections: Dict[str, str] = {}
+        self.exclusion_list: set = set()
         
         # Load all glossary data
         self._load_glossary_data()
         
         logger.info(f"GlossaryManager initialized with {len(self.medical_technical_glossary)} terms, "
-                   f"{len(self.phrase_translations)} phrases, {len(self.abbreviations)} abbreviations")
+                   f"{len(self.phrase_translations)} phrases, {len(self.abbreviations)} abbreviations, "
+                   f"{len(self.exclusion_list)} exclusions")
     
     def _load_glossary_data(self):
         """Load all glossary data from CSV files"""
@@ -37,6 +39,7 @@ class GlossaryManager:
         self._load_phrase_translations()
         self._load_abbreviations()
         self._load_post_processing_corrections()
+        self._load_exclusion_list()
     
     def _load_medical_technical_glossary(self):
         """Load medical/technical terms from CSV"""
@@ -117,6 +120,25 @@ class GlossaryManager:
             logger.info(f"Loaded {len(self.post_processing_corrections)} post-processing corrections")
         except Exception as e:
             logger.error(f"Error loading post-processing corrections: {e}")
+    
+    def _load_exclusion_list(self):
+        """Load exclusion list from CSV"""
+        csv_file = os.path.join(self.glossary_dir, "exclusion_list.csv")
+        
+        if not os.path.exists(csv_file):
+            # Create default file with common exclusions
+            self._create_default_exclusion_list_csv(csv_file)
+        
+        try:
+            with open(csv_file, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    term = row.get('term', '').strip().lower()
+                    if term:
+                        self.exclusion_list.add(term)
+            logger.info(f"Loaded {len(self.exclusion_list)} terms from exclusion list")
+        except Exception as e:
+            logger.error(f"Error loading exclusion list: {e}")
     
     def _create_default_medical_technical_csv(self, csv_file: str):
         """Create default medical/technical terms CSV"""
@@ -267,6 +289,43 @@ class GlossaryManager:
         
         logger.info(f"Created default post-processing corrections CSV: {csv_file}")
     
+    def _create_default_exclusion_list_csv(self, csv_file: str):
+        """Create default exclusion list CSV"""
+        default_exclusions = [
+            # Brand names and proper nouns
+            {'term': 'neotree', 'reason': 'Brand name'},
+            {'term': "neotree's", 'reason': 'Brand name'},
+            {'term': 'sally mugabe central hospital', 'reason': 'Hospital name'},
+            {'term': 'chinhoyi provincial hospital', 'reason': 'Hospital name'},
+            {'term': 'kamuzu central hospital', 'reason': 'Hospital name'},
+            {'term': 'kasungu district hospital', 'reason': 'Hospital name'},
+            
+            # Technical abbreviations and terms
+            {'term': 'cds', 'reason': 'Technical abbreviation'},
+            {'term': 'ai', 'reason': 'Technical abbreviation'},
+            {'term': 'ai-cds', 'reason': 'Technical term'},
+            {'term': 'ai-enabled', 'reason': 'Technical term'},
+            {'term': 'nicu', 'reason': 'Medical abbreviation'},
+            {'term': 'nnu', 'reason': 'Medical abbreviation'},
+            {'term': 'dhis2', 'reason': 'System name'},
+            {'term': 'emrs', 'reason': 'System abbreviation'},
+            {'term': 'moh', 'reason': 'Government abbreviation'},
+            
+            # Specific phrases and terms
+            {'term': 'healthcare systems usability scale for clinical decision support systems', 'reason': 'Specific assessment tool'},
+            {'term': 'gut feeling', 'reason': 'Idiomatic expression'},
+            {'term': 'artificial intelligence', 'reason': 'Technical term'},
+            {'term': 'aim 2', 'reason': 'Research objective'},
+            {'term': 'normalization measure development questionnaire', 'reason': 'Specific assessment tool'}
+        ]
+        
+        with open(csv_file, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=['term', 'reason'])
+            writer.writeheader()
+            writer.writerows(default_exclusions)
+        
+        logger.info(f"Created default exclusion list CSV: {csv_file}")
+    
     def preprocess_text(self, text: str) -> str:
         """Preprocess text to handle abbreviations"""
         result = text
@@ -275,6 +334,10 @@ class GlossaryManager:
         sorted_abbrevs = sorted(self.abbreviations.items(), key=lambda x: len(x[0]), reverse=True)
         
         for abbrev, expansion in sorted_abbrevs:
+            # Skip if this abbreviation is in exclusion list
+            if abbrev.lower() in self.exclusion_list:
+                continue
+                
             pattern = r'\b' + re.escape(abbrev) + r'\b'
             result = re.sub(pattern, expansion, result, flags=re.IGNORECASE)
         
@@ -283,6 +346,11 @@ class GlossaryManager:
     def translate_with_glossary(self, text: str) -> Optional[str]:
         """Try to translate using glossary first"""
         text_lower = text.lower().strip()
+        
+        # Check if the entire text is in exclusion list
+        if text_lower in self.exclusion_list:
+            logger.info(f"Excluded from translation: '{text}'")
+            return None
         
         # Check for exact phrase matches first
         if text_lower in self.phrase_translations:
@@ -301,6 +369,10 @@ class GlossaryManager:
                             key=lambda x: len(x[0]), reverse=True)
         
         for english, shona in sorted_terms:
+            # Skip if this term is in exclusion list
+            if english.lower() in self.exclusion_list:
+                continue
+                
             pattern = r'\b' + re.escape(english) + r'\b'
             if re.search(pattern, result, re.IGNORECASE):
                 result = re.sub(pattern, shona, result, flags=re.IGNORECASE)
@@ -329,5 +401,6 @@ class GlossaryManager:
             'medical_technical_terms': len(self.medical_technical_glossary),
             'phrase_translations': len(self.phrase_translations),
             'abbreviations': len(self.abbreviations),
-            'post_processing_corrections': len(self.post_processing_corrections)
+            'post_processing_corrections': len(self.post_processing_corrections),
+            'exclusion_list': len(self.exclusion_list)
         }

@@ -1,4 +1,64 @@
 .env
 input-files/*.docx
 
+# macOS
 .DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.env
+*.env.*
+
+# VSCode
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Test/coverage
+.coverage
+.tox/
+.nox/
+.cache/
+.pytest_cache/
+htmlcov/
+coverage.xml
+
+# Distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# pipenv
+Pipfile.lock
+
+# Other
+*.swp
+*.swo
+# End of Selection

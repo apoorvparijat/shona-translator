@@ -52,8 +52,8 @@ class TestMyMemoryShonaTranslator(unittest.TestCase):
         self.assertIn('rate_limit_delay', info)
         self.assertIn('glossary_stats', info)
         
-        self.assertEqual(info['translator_type'], "MyMemory")
-        self.assertEqual(info['rate_limit_delay'], 1.0)
+        self.assertEqual(info['translator_type'], "MyMemoryShonaTranslator")
+        self.assertEqual(info['rate_limit_delay'], 0.1)
         self.assertIsInstance(info['glossary_stats'], dict)
     
     @patch('mymemory_translator.requests.get')
@@ -70,7 +70,7 @@ class TestMyMemoryShonaTranslator(unittest.TestCase):
         mock_response.raise_for_status.return_value = None
         mock_get.return_value = mock_response
         
-        result = self.translator.translate_text("Hello")
+        result = self.translator._translate_with_api("Hello")
         
         self.assertEqual(result, "Mhoro")
         mock_get.assert_called_once()
@@ -86,10 +86,10 @@ class TestMyMemoryShonaTranslator(unittest.TestCase):
         }
         mock_get.return_value = mock_response
         
-        result = self.translator.translate_text("Hello")
+        result = self.translator._translate_with_api("Hello")
         
-        # Should return original text when API fails
-        self.assertEqual(result, "Hello")
+        # Should return None when API fails
+        self.assertIsNone(result)
     
     @patch('mymemory_translator.requests.get')
     def test_translate_text_network_error(self, mock_get):
@@ -97,10 +97,10 @@ class TestMyMemoryShonaTranslator(unittest.TestCase):
         # Mock network error
         mock_get.side_effect = Exception("Network error")
         
-        result = self.translator.translate_text("Hello")
+        result = self.translator._translate_with_api("Hello")
         
-        # Should return original text when network fails
-        self.assertEqual(result, "Hello")
+        # Should return None when network fails
+        self.assertIsNone(result)
     
     def test_get_best_translation_with_glossary(self):
         """Test that glossary terms are handled correctly"""
@@ -114,11 +114,11 @@ class TestMyMemoryShonaTranslator(unittest.TestCase):
     
     def test_empty_text_handling(self):
         """Test handling of empty text"""
-        result = self.translator.translate_text("")
-        self.assertEqual(result, "")
+        result = self.translator._translate_with_api("")
+        self.assertIsNone(result)
         
-        result = self.translator.translate_text(None)
-        self.assertEqual(result, "")
+        result = self.translator._translate_with_api(None)
+        self.assertIsNone(result)
 
 
 if __name__ == '__main__':

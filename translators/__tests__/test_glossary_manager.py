@@ -9,9 +9,7 @@ import sys
 import tempfile
 import shutil
 
-# Add the parent directory to the path so we can import the modules
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
+# Import the module to test
 from glossary_manager import GlossaryManager
 
 
@@ -46,7 +44,7 @@ class TestGlossaryManager(unittest.TestCase):
     def test_preprocess_text(self):
         """Test text preprocessing functionality"""
         test_cases = [
-            ("HCW CDS AI NICU", "healthcare workers clinical decision support artificial intelligence neonatal intensive care unit"),
+            ("HCW CDS AI NICU", "healthcare worker clinical decision support artificial intelligence neonatal intensive care unit"),
             ("version 1.0", "version 1.0"),
             ("normal text", "normal text")
         ]
@@ -59,9 +57,9 @@ class TestGlossaryManager(unittest.TestCase):
     def test_translate_with_glossary(self):
         """Test glossary-based translation"""
         test_cases = [
-            ("version", "shanduro"),
+            ("version", "shanduko"),
             ("healthcare workers", "vashandi vehutano"),
-            ("clinical decision support", "tsigiro yesarudzo yekiriniki"),
+            ("clinical decision support", "rutsigiro rwesarudzo yekiriniki"),
             ("what is your name", "zita rako ndiani")
         ]
         

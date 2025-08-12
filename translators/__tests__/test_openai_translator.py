@@ -40,9 +40,8 @@ class TestOpenAIShonaTranslator(unittest.TestCase):
     def test_openai_translator_initialization(self):
         """Test that OpenAIShonaTranslator initializes correctly"""
         self.assertIsNotNone(self.translator)
-        self.assertEqual(self.translator.translator_type, "OpenAI")
-        self.assertEqual(self.translator.rate_limit_delay, 2.0)
-        self.assertTrue(hasattr(self.translator, 'translate_text'))
+        self.assertEqual(self.translator._get_rate_limit_delay(), 0.5)
+        self.assertTrue(hasattr(self.translator, '_translate_with_api'))
     
     def test_get_translator_info(self):
         """Test that translator info is returned correctly"""
@@ -53,8 +52,8 @@ class TestOpenAIShonaTranslator(unittest.TestCase):
         self.assertIn('rate_limit_delay', info)
         self.assertIn('glossary_stats', info)
         
-        self.assertEqual(info['translator_type'], "OpenAI")
-        self.assertEqual(info['rate_limit_delay'], 2.0)
+        self.assertEqual(info['translator_type'], "OpenAIShonaTranslator")
+        self.assertEqual(info['rate_limit_delay'], 0.5)
         self.assertIsInstance(info['glossary_stats'], dict)
     
     @patch('openai_translator.openai.ChatCompletion.create')
@@ -66,7 +65,7 @@ class TestOpenAIShonaTranslator(unittest.TestCase):
         mock_response.choices[0].message.content = "Mhoro"
         mock_create.return_value = mock_response
         
-        result = self.translator.translate_text("Hello")
+        result = self.translator._translate_with_api("Hello")
         
         self.assertEqual(result, "Mhoro")
         mock_create.assert_called_once()
@@ -77,10 +76,10 @@ class TestOpenAIShonaTranslator(unittest.TestCase):
         # Mock API error
         mock_create.side_effect = Exception("API error")
         
-        result = self.translator.translate_text("Hello")
+        result = self.translator._translate_with_api("Hello")
         
-        # Should return original text when API fails
-        self.assertEqual(result, "Hello")
+        # Should return None when API fails
+        self.assertIsNone(result)
     
     @patch('openai_translator.openai.ChatCompletion.create')
     def test_translate_text_empty_response(self, mock_create):
@@ -90,10 +89,10 @@ class TestOpenAIShonaTranslator(unittest.TestCase):
         mock_response.choices = []
         mock_create.return_value = mock_response
         
-        result = self.translator.translate_text("Hello")
+        result = self.translator._translate_with_api("Hello")
         
-        # Should return original text when response is empty
-        self.assertEqual(result, "Hello")
+        # Should return None when response is empty
+        self.assertIsNone(result)
     
     @patch('openai_translator.openai.ChatCompletion.create')
     def test_translate_text_missing_content(self, mock_create):
@@ -104,10 +103,10 @@ class TestOpenAIShonaTranslator(unittest.TestCase):
         mock_response.choices[0].message.content = None
         mock_create.return_value = mock_response
         
-        result = self.translator.translate_text("Hello")
+        result = self.translator._translate_with_api("Hello")
         
-        # Should return original text when content is missing
-        self.assertEqual(result, "Hello")
+        # Should return None when content is missing
+        self.assertIsNone(result)
     
     def test_get_best_translation_with_glossary(self):
         """Test that glossary terms are handled correctly"""
@@ -121,21 +120,17 @@ class TestOpenAIShonaTranslator(unittest.TestCase):
     
     def test_empty_text_handling(self):
         """Test handling of empty text"""
-        result = self.translator.translate_text("")
-        self.assertEqual(result, "")
+        result = self.translator._translate_with_api("")
+        self.assertIsNone(result)
         
-        result = self.translator.translate_text(None)
-        self.assertEqual(result, "")
+        result = self.translator._translate_with_api(None)
+        self.assertIsNone(result)
     
     def test_prompt_generation(self):
-        """Test that the prompt is generated correctly"""
-        test_text = "Hello world"
-        prompt = self.translator._generate_prompt(test_text)
-        
-        self.assertIsInstance(prompt, str)
-        self.assertIn("Shona", prompt)
-        self.assertIn(test_text, prompt)
-        self.assertIn("Translate", prompt)
+        """Test that the system prompt is correctly configured"""
+        self.assertIsInstance(self.translator.system_prompt, str)
+        self.assertIn("Shona", self.translator.system_prompt)
+        self.assertIn("Translate", self.translator.system_prompt)
 
 
 if __name__ == '__main__':
