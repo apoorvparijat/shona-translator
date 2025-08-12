@@ -47,7 +47,7 @@ class TestGoogleShonaTranslator(unittest.TestCase):
     
     def test_get_translator_info(self):
         """Test that translator info is returned correctly"""
-        with patch('googletrans.Translator') as mock_translator_class:
+        with patch('google_translator.Translator') as mock_translator_class:
             mock_translator = Mock()
             mock_translator_class.return_value = mock_translator
             
@@ -137,7 +137,7 @@ class TestGoogleShonaTranslator(unittest.TestCase):
     
     def test_get_best_translation_with_glossary(self):
         """Test that glossary terms are handled correctly"""
-        with patch('googletrans.Translator') as mock_translator_class:
+        with patch('google_translator.Translator') as mock_translator_class:
             mock_translator = Mock()
             mock_translator_class.return_value = mock_translator
             
