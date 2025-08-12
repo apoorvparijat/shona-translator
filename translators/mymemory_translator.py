@@ -64,17 +64,11 @@ def main():
     """Main function to run the MyMemory translator"""
     translator = MyMemoryShonaTranslator()
     
-    # Input and output files
-    input_file = "collection-tools.docx"
-    output_file = "collection-tools_shona_mymemory.docx"
-    
-    if not os.path.exists(input_file):
-        print(f"Error: Input file '{input_file}' not found.")
-        return
-    
-    print(f"🌐 Starting MyMemory translation of '{input_file}' from English to Shona...")
-    print("⚡ Using MyMemory API with shared glossary")
-    print("This may take a while depending on document size...")
+    # Example usage - this is just for demonstration
+    # In practice, use the CLI tool: python shona_translate.py input.docx --method mymemory
+    print("🌐 MyMemory Shona Translator")
+    print("Use the CLI tool for file translation:")
+    print("  python shona_translate.py input.docx --method mymemory")
     
     # Print translator info
     info = translator.get_translator_info()
@@ -83,19 +77,12 @@ def main():
     print(f"   Rate limit delay: {info['rate_limit_delay']}s")
     print(f"   Glossary stats: {info['glossary_stats']}")
     
-    success = translator.translate_docx(input_file, output_file)
-    
-    if success:
-        print(f"✅ MyMemory translation completed successfully!")
-        print(f"📄 Translated document saved as: {output_file}")
-        print("\n🔍 MyMemory Translation Features:")
-        print("- Free MyMemory API service")
-        print("- Shared glossary for deterministic terms")
-        print("- Abbreviation preprocessing")
-        print("- Post-processing error correction")
-        print("- Preserved document formatting and structure")
-    else:
-        print("❌ Translation failed. Check the logs for details.")
+    print("\n🔍 MyMemory Translation Features:")
+    print("- Free MyMemory API service")
+    print("- Shared glossary for deterministic terms")
+    print("- Abbreviation preprocessing")
+    print("- Post-processing error correction")
+    print("- Preserved document formatting and structure")
 
 if __name__ == "__main__":
     main()

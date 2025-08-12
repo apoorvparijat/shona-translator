@@ -117,17 +117,11 @@ def main():
     try:
         translator = OpenAIShonaTranslator()
         
-        # Input and output files
-        input_file = "collection-tools.docx"
-        output_file = "collection-tools_shona_openai.docx"
-        
-        if not os.path.exists(input_file):
-            print(f"Error: Input file '{input_file}' not found.")
-            return
-        
-        print(f"🤖 Starting OpenAI translation of '{input_file}' from English to Shona...")
-        print("⚡ Using GPT-3.5-turbo with shared glossary")
-        print("This may take a while due to API rate limits...")
+        # Example usage - this is just for demonstration
+        # In practice, use the CLI tool: python shona_translate.py input.docx --method openai
+        print("🤖 OpenAI Shona Translator")
+        print("Use the CLI tool for file translation:")
+        print("  python shona_translate.py input.docx --method openai")
         
         # Print translator info
         info = translator.get_translator_info()
@@ -137,20 +131,13 @@ def main():
         print(f"   Glossary stats: {info['glossary_stats']}")
         print(f"   Model: {translator.model}")
         
-        success = translator.translate_docx(input_file, output_file)
-        
-        if success:
-            print(f"✅ OpenAI translation completed successfully!")
-            print(f"📄 Translated document saved as: {output_file}")
-            print("\n🔍 OpenAI Translation Features:")
-            print("- Context-aware AI translation")
-            print("- Shared glossary for deterministic terms")
-            print("- Abbreviation preprocessing")
-            print("- Post-processing error correction")
-            print("- Professional tone preservation")
-            print("- Maintained document formatting")
-        else:
-            print("❌ OpenAI translation failed. Check the logs for details.")
+        print("\n🔍 OpenAI Translation Features:")
+        print("- Context-aware AI translation")
+        print("- Shared glossary for deterministic terms")
+        print("- Abbreviation preprocessing")
+        print("- Post-processing error correction")
+        print("- Professional tone preservation")
+        print("- Maintained document formatting")
     
     except Exception as e:
         print(f"❌ Failed to initialize OpenAI translator: {e}")
