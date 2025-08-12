@@ -2,6 +2,44 @@
 
 A high-accuracy English to Shona DOCX translation tool that preserves document formatting and structure.
 
+## Quick Start
+
+### Setup (one-time)
+
+```bash
+# Install Python packages
+pip install -r requirements.txt
+
+# Or use the setup script
+python setup.py
+```
+
+### Run Translator
+
+```bash
+# Translate a document (uses MyMemory by default)
+python shona_translate.py your_document.docx
+
+# Translate with Agent (requires API key in .env file)
+python shona_translate.py your_document.docx --method agent
+
+# Translate with Google Translate
+python shona_translate.py your_document.docx --method google
+
+# Translate with MyMemory (free https://translated.com service)
+python shona_translate.py your_document.docx --method mymemory
+
+# See all available methods
+python shona_translate.py --list-methods
+```
+
+### Optional: Add OpenAI API Key
+
+```bash
+# Create .env file and add your OpenAI API key for better translations
+echo "OPENAI_API_KEY=your_key_here" > .env
+```
+
 ## Features
 
 - 🌍 **Multiple translation services**: MyMemory (free), Google Translate (free), OpenAI GPT (paid)
@@ -66,44 +104,26 @@ The tool uses a multi-engine approach with shared glossary for maximum accuracy:
 
 All translators use the same shared glossary system for consistent terminology and include an exclusion list for terms that should not be translated.
 
-## Supported Features
+## File Format Support
 
-- ✅ Paragraphs with formatting (bold, italic, underline)
-- ✅ Tables with cell content
-- ✅ Font preservation
-- ✅ Document structure
-- ⚠️ Images (preserved but captions not translated)
-- ⚠️ Headers/footers (basic support)
+- **DOCX**: Microsoft Word documents
+- **PDF**: Portable Document Format
+- **TXT**: Plain text files
+- **HTML**: Hypertext Markup Language
+- **RTF**: Rich Text Format
+- **ODT**: OpenDocument Text
+- **ODS**: OpenDocument Spreadsheet
+- **ODP**: OpenDocument Presentation
+- **ODG**: OpenDocument Graphics
+- **ODF**: OpenDocument Formula
 
 ## Language Support
 
 - **Source**: English
 - **Target**: Shona (Bantu language spoken in Zimbabwe)
 
-## Performance
+# FAQ
 
-- Small documents (< 10 pages): ~2-5 minutes
-- Medium documents (10-50 pages): ~10-30 minutes
-- Large documents (> 50 pages): ~30+ minutes
+## How to avoid cache issues?
 
-Translation speed depends on document complexity and API response times.
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Rate limiting**: The tool includes automatic delays to prevent rate limiting
-2. **API errors**: Check your internet connection and API keys
-3. **Formatting issues**: Some complex formatting might be simplified
-
-### Logs
-
-The tool provides detailed logging. Check console output for translation progress and any errors.
-
-## Contributing
-
-Feel free to improve the translation quality by:
-
-- Adding more translation services
-- Improving formatting preservation
-- Adding support for more document elements
+Delete the translation_cache.json file.

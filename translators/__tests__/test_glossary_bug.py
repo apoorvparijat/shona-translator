@@ -58,15 +58,7 @@ class TestGlossaryBug(unittest.TestCase):
             writer.writeheader()
             writer.writerows(medical_terms)
         
-        # Create phrase_translations.csv
-        phrases = [
-            {'english': 'what have been key benefits', 'shona': 'zvakave zvibatsiro zvakakosha', 'category': 'general'},
-        ]
-        
-        with open('glossary/phrase_translations.csv', 'w', newline='', encoding='utf-8') as f:
-            writer = csv.DictWriter(f, fieldnames=['english', 'shona', 'category'])
-            writer.writeheader()
-            writer.writerows(phrases)
+
         
         # Create other required CSV files
         for filename in ['abbreviations.csv', 'post_processing_corrections.csv', 'exclusion_list.csv']:

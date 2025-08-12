@@ -100,7 +100,6 @@ def test_csv_files():
         
         csv_files = [
             "glossary/medical_technical_terms.csv",
-            "glossary/phrase_translations.csv", 
             "glossary/abbreviations.csv",
             "glossary/post_processing_corrections.csv",
             "glossary/exclusion_list.csv"
