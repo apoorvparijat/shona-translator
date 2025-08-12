@@ -295,11 +295,2279 @@
         "first_seen": 1755008005.873301,
         "last_updated": 1755008005.873308
       }
+    },
+    "435f87805673365452c35cc21a517d8d": {
+      "original_text": "Are data being entered in real time, or from memory/paper notes?",
+      "translations": {
+        "agent": {
+          "text": "Data riri kupinzwa munguva chaiyo (real time) here, kana kuti kubva mundangariro kana kubva kuzvinyorwa zvephepha?",
+          "confidence": 0.9,
+          "timestamp": 1755008020.180678
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008020.180676,
+        "last_updated": 1755008020.1806788
+      }
+    },
+    "93283c8350975366751b3e98bbd79dc8": {
+      "original_text": "3. Decision-making and cognitive behaviour ",
+      "translations": {
+        "agent": {
+          "text": "3. Kuita sarudzo uye maitiro epfungwa (cognitive behaviour)",
+          "confidence": 0.9,
+          "timestamp": 1755008044.53151
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008044.5315058,
+        "last_updated": 1755008044.531512
+      }
+    },
+    "10b44dd899a2a6d2c9b7115eded29752": {
+      "original_text": "Does the user seem to follow the CDS advice directly, question it, or ignore it?",
+      "translations": {
+        "agent": {
+          "text": "Mushandisi anoita here sekutevera kurudziro yeCDS zvakananga, kubvunza kurudziro iyoyo, kana kuregeredza kurudziro iyoyo?",
+          "confidence": 0.9,
+          "timestamp": 1755008072.398759
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008072.398755,
+        "last_updated": 1755008072.398761
+      }
+    },
+    "bbb09566c8254dee6dd57899c366ab86": {
+      "original_text": "Are there signs that the user is confirming their clinical intuition with the CDS (e.g., entering data after forming a hypothesis)?",
+      "translations": {
+        "agent": {
+          "text": "Pane zviratidzo here zvekuti mushandisi ari kusimbisa kunzwa kwake kwekiriniki kuburikidza ne CDS (semuenzaniso, kupinza data mushure mekugadzira fungidziro (hypothesis))?",
+          "confidence": 0.9,
+          "timestamp": 1755008085.5948958
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008085.594891,
+        "last_updated": 1755008085.5948968
+      }
+    },
+    "5a849ebbfab7042a7bd0b481746978a5": {
+      "original_text": "Does the user pause to reflect, change course, or seek confirmation based on CDS outputs?",
+      "translations": {
+        "agent": {
+          "text": "Mushandisi anomira kwekanguva kuti afungisise, achinja maitiro, kana kutsvaga kusimbiswa zvichibva pazvinobuda zveCDS here?",
+          "confidence": 0.9,
+          "timestamp": 1755008159.114739
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008159.1147351,
+        "last_updated": 1755008159.114741
+      }
+    },
+    "4fc21d44fe73c7e51e37b8d03a168497": {
+      "original_text": "Does the CDS output trigger discussion, debate, or team validation?",
+      "translations": {
+        "agent": {
+          "text": "Ko mhedzisiro yeCDS inokurudzira nhaurirano, nharo, kana kusimbiswa kwechikwata here?",
+          "confidence": 0.9,
+          "timestamp": 1755008169.1050398
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008169.105036,
+        "last_updated": 1755008169.1050408
+      }
+    },
+    "a8ba303f4885f7016a3355113c681f74": {
+      "original_text": "4. Team and Peer Interaction",
+      "translations": {
+        "agent": {
+          "text": "4. Kudyidzana kweChikwata neVezera",
+          "confidence": 0.9,
+          "timestamp": 1755008176.080729
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008176.0807219,
+        "last_updated": 1755008176.0807302
+      }
+    },
+    "ecbccfd2eedd19be9391c725a6b8437e": {
+      "original_text": "Is CDS use discussed with colleagues or supervisors during the patient encounter?",
+      "translations": {
+        "agent": {
+          "text": "Kushandiswa kwerutsigiro rwesarudzo yekiriniki (CDS) kunokurukurwa nevamwe vashandi kana vatariri panguva yekusangana nemurwere here?",
+          "confidence": 0.9,
+          "timestamp": 1755008189.698585
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008189.698582,
+        "last_updated": 1755008189.698585
+      }
+    },
+    "32cd856ac01fd087bf672ac1f8e678f0": {
+      "original_text": "Is use of Neotree collaborative (e.g., one enters data while others interpret)?",
+      "translations": {
+        "agent": {
+          "text": "Kushandiswa kweNeotree kunoitwa nenzira yekushandira pamwe here (semuenzaniso, mumwe anoisa data uku vamwe vachodudzira)?",
+          "confidence": 0.9,
+          "timestamp": 1755008205.921472
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008205.921468,
+        "last_updated": 1755008205.921474
+      }
+    },
+    "24f400724b53bb1ff219fbdda7a4a44d": {
+      "original_text": "Do team members seem aligned or divided in how they interpret or value CDS input?",
+      "translations": {
+        "agent": {
+          "text": "Nhengo dzechikwata dzinoita sekunge dzakabatana here kana kuti dzakapatsanuka maererano nemaitiro avanodudzira kana kukoshesa mupiro (input) weCDS?",
+          "confidence": 0.9,
+          "timestamp": 1755008230.364112
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008230.364107,
+        "last_updated": 1755008230.3641129
+      }
+    },
+    "e3411adfb1ca2adc38996a8ae6b8870d": {
+      "original_text": "Are families consulted during decision making (especially around treatment)?",
+      "translations": {
+        "agent": {
+          "text": "Mhuri dzinobvunzwa kana kupihwa mukana wekupinda mukuita sarudzo here (kunyanya panyaya dzekurapwa)?",
+          "confidence": 0.9,
+          "timestamp": 1755008247.089317
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008247.089313,
+        "last_updated": 1755008247.089319
+      }
+    },
+    "c8bd1a95f162206921b8fd27bc107328": {
+      "original_text": "5. Value, Impact, and Workload ",
+      "translations": {
+        "agent": {
+          "text": "5. Kukosha, Pesvedzero, uye Mutoro Webasa",
+          "confidence": 0.9,
+          "timestamp": 1755008256.474818
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008256.474816,
+        "last_updated": 1755008256.4748192
+      }
+    },
+    "5c5e9a75bc3d92e4c05430cc81b4a9db": {
+      "original_text": "Does the CDS appear to improve or disrupt workflow efficiency?",
+      "translations": {
+        "agent": {
+          "text": "Rutsigiro rwesarudzo yekiriniki (CDS) runoratidzika here kuvandudza kana kuvhiringidza kushanda zvakanaka kwemukufamba webasa?",
+          "confidence": 0.9,
+          "timestamp": 1755008272.1943738
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008272.194368,
+        "last_updated": 1755008272.194376
+      }
+    },
+    "48d0972abbe8a30ed335cd9d63bd298e": {
+      "original_text": "Are patient interactions enhanced or disrupted by CDS use?",
+      "translations": {
+        "agent": {
+          "text": "Kudyidzana pakati pevashandi vehutano nevarwere kunovandudzwa here kana kuti kunovhiringidzwa nekushandiswa kweCDS?",
+          "confidence": 0.9,
+          "timestamp": 1755008294.456275
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008294.456272,
+        "last_updated": 1755008294.456276
+      }
+    },
+    "059a347038fe1d7f5560e13864685e5a": {
+      "original_text": "Does the user appear more or less confident when using the CDS?",
+      "translations": {
+        "agent": {
+          "text": "Mushandisi anoonekwa aine chivimbo chakawanda kana chishoma paanenge achishandisa CDS here?",
+          "confidence": 0.9,
+          "timestamp": 1755008300.944729
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008300.944725,
+        "last_updated": 1755008300.944731
+      }
+    },
+    "76ba11c808dcee70799fcc5cbb67dc6d": {
+      "original_text": "Are there visible outcomes that suggest the CDS changed or reinforced a clinical decision?",
+      "translations": {
+        "agent": {
+          "text": "Pane mhedzisiro dzinoonekwa dzinoratidza kuti CDS yakachinja kana kusimbisa sarudzo yekiriniki here?",
+          "confidence": 0.9,
+          "timestamp": 1755008312.647291
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008312.6472871,
+        "last_updated": 1755008312.647292
+      }
+    },
+    "139a48fabed76620ba55a9c701ec7663": {
+      "original_text": "6. Adaptation and Workarounds ",
+      "translations": {
+        "agent": {
+          "text": "6. Kuchinjika uye Nzira dzekutenderedza matambudziko (workarounds)",
+          "confidence": 0.9,
+          "timestamp": 1755008329.6596391
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008329.659636,
+        "last_updated": 1755008329.65964
+      }
+    },
+    "b857493c6d258e6327a99fbccc04ac4c": {
+      "original_text": "Are there delays, workarounds, or skipped steps? (e.g., using paper records to supplement the CDS)?",
+      "translations": {
+        "agent": {
+          "text": "Pane kunonoka, nzira dzekupotera (workarounds), kana nhanho dziri kusvetukwa here? (semuenzaniso, kushandisa marekodhi ephepha kutsigira CDS)?",
+          "confidence": 0.9,
+          "timestamp": 1755008357.417835
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008357.416605,
+        "last_updated": 1755008357.417839
+      }
+    },
+    "d37787c5536e126333ca4d3c824a977e": {
+      "original_text": "Are users making adaptations or personal routines for CDS use (e.g., only using certain features)?",
+      "translations": {
+        "agent": {
+          "text": "Vashandisi vari here kuita zvigadziriso kana maitiro avo pachavo pakushandisa CDS (semuenzaniso, kushandisa chete zvimwe zvimiro)?",
+          "confidence": 0.9,
+          "timestamp": 1755008370.4122071
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008370.412205,
+        "last_updated": 1755008370.4122071
+      }
+    },
+    "748787f39a255826adef0ecd89c8eff1": {
+      "original_text": "Are there moments of improvisation when the tool fails or is unavailable?",
+      "translations": {
+        "agent": {
+          "text": "Pane here nguva dzekugadzira nzira dzekukurumidza (improvisation) kana chishandiso chikatadza kushanda kana chisiri kuwanikwa?",
+          "confidence": 0.9,
+          "timestamp": 1755008378.670175
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008378.6701708,
+        "last_updated": 1755008378.670176
+      }
+    },
+    "f009da2857a84fc04837c624c6fa9319": {
+      "original_text": "7. Barriers and Enablers",
+      "translations": {
+        "agent": {
+          "text": "7. Zvipingamupinyi ne Zvinofambisa",
+          "confidence": 0.9,
+          "timestamp": 1755008386.8094301
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008386.8094258,
+        "last_updated": 1755008386.809432
+      }
+    },
+    "ede365b20cef987e53bf8c99e424a2ee": {
+      "original_text": "What technical or logistical barriers are evident? (e.g., power cuts, app crashes)",
+      "translations": {
+        "agent": {
+          "text": "Ndezvipi zvipingamupinyi zvehunyanzvi kana zvekuronga nekufambisa zvinhu (logistics) zviri pachena? (semuenzaniso, kudzimwa kwemagetsi, kukanganisika kweapplication (app crashes))",
+          "confidence": 0.9,
+          "timestamp": 1755008430.043904
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008430.043901,
+        "last_updated": 1755008430.043905
+      }
+    },
+    "17c252568d6386edd9cc17ec0f4c9c2f": {
+      "original_text": "What enablers make CDS use easier? (e.g., available tech support, peer encouragement)",
+      "translations": {
+        "agent": {
+          "text": "Ndezvipi zvinhu zvinofambisa kana kuti zvinokurerutsa kushandiswa kweCDS? (semuenzaniso, rutsigiro rwehunyanzvi runowanikwa, kurudziro kubva kune vezera)",
+          "confidence": 0.9,
+          "timestamp": 1755008456.779788
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008456.779784,
+        "last_updated": 1755008456.7797902
+      }
+    },
+    "aab86524843346ab9a962386cb1c80fc": {
+      "original_text": "Are there emotional or behavioural cues indicating frustration, confidence, satisfaction, etc.?",
+      "translations": {
+        "agent": {
+          "text": "Pane here zviratidzo zvemanzwiro kana maitiro zvinoratidza kushungurudzika, chivimbo, kugutsikana, nezvimwe zvakadaro?",
+          "confidence": 0.9,
+          "timestamp": 1755008462.73232
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008462.732314,
+        "last_updated": 1755008462.732321
+      }
+    },
+    "a307c2530969740931481d0c95782a63": {
+      "original_text": "Focus group discussion #1 (Healthcare workers)",
+      "translations": {
+        "agent": {
+          "text": "Nhaurirano yeboka rekutarisa #1 (vashandi vehutano)",
+          "confidence": 0.9,
+          "timestamp": 1755008467.4185128
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008467.418508,
+        "last_updated": 1755008467.418516
+      }
+    },
+    "af2f9e745f6bb3de5c18fdb246412061": {
+      "original_text": "Objective: To debrief on observations made regarding healthcare workers’ use of and interaction with Neotree’s clinical decision support system",
+      "translations": {
+        "agent": {
+          "text": "Chinangwa: Kuita ongororo yekupfupikisa (debrief) pamusoro pezvakacherechedzwa maererano nekushandiswa nevashandi vehutano uye nekudyidzana kwavo nehurongwa hwerutsigiro rwesarudzo yekiriniki hwe Neotree’s",
+          "confidence": 0.9,
+          "timestamp": 1755008499.449337
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008499.449332,
+        "last_updated": 1755008499.449339
+      }
+    },
+    "982eeac017974387e7de775490a40671": {
+      "original_text": "Participants: Healthcare workers (1x group of 4-5 healthcare workers per site)",
+      "translations": {
+        "agent": {
+          "text": "Vatori vechikamu: Vashandi vehutano (boka rimwe rine vashandi vehutano 4-5 panenzvimbo yega yega)",
+          "confidence": 0.9,
+          "timestamp": 1755008507.490643
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008507.4906392,
+        "last_updated": 1755008507.490645
+      }
+    },
+    "408e4faec635be45eb95d0888a18cc41": {
+      "original_text": "Methodology: Focus group discussion",
+      "translations": {
+        "agent": {
+          "text": "Maitiro: Nhaurirano yeboka rekutarisa",
+          "confidence": 0.9,
+          "timestamp": 1755008511.704382
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008511.7043772,
+        "last_updated": 1755008511.704384
+      }
+    },
+    "5b94bbc9490ef5ee92d656c7bdfc5b8e": {
+      "original_text": "Duration: 60-90 minutes",
+      "translations": {
+        "agent": {
+          "text": "Nguva: 60-90 maminitsi",
+          "confidence": 0.9,
+          "timestamp": 1755008515.63097
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008515.630965,
+        "last_updated": 1755008515.630972
+      }
+    },
+    "8800e1c9b3e22c44ba59a34db3fe4841": {
+      "original_text": "Introduction",
+      "translations": {
+        "agent": {
+          "text": "Nhanganyaya",
+          "confidence": 0.9,
+          "timestamp": 1755008518.80762
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008518.807615,
+        "last_updated": 1755008518.807621
+      }
+    },
+    "c7bcc9ead52d63a2778268ec8fa73c2b": {
+      "original_text": "Before we start, can I check whether you have:",
+      "translations": {
+        "agent": {
+          "text": "Tisati tatanga, ndinogona here kuona kana muine:",
+          "confidence": 0.9,
+          "timestamp": 1755008548.840468
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008548.8404648,
+        "last_updated": 1755008548.840469
+      }
+    },
+    "c0753ea8693b48b0e945eefdd7a00174": {
+      "original_text": "·   \tbeen told about the study",
+      "translations": {
+        "agent": {
+          "text": "·    akaziviswa nezvekudzidza",
+          "confidence": 0.9,
+          "timestamp": 1755008569.570287
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008569.570282,
+        "last_updated": 1755008569.570289
+      }
+    },
+    "8b7afda4cdb5580f31927314731864ea": {
+      "original_text": "·   \thad an information sheet",
+      "translations": {
+        "agent": {
+          "text": "·   \taiva negwaro reruzivo",
+          "confidence": 0.9,
+          "timestamp": 1755008586.850421
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008586.850417,
+        "last_updated": 1755008586.850422
+      }
+    },
+    "795812d203ed6791d324c87c6a8bccbd": {
+      "original_text": "·   \tsigned a consent form",
+      "translations": {
+        "agent": {
+          "text": "·   \takasaina fomu remvumo",
+          "confidence": 0.9,
+          "timestamp": 1755008593.7089589
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008593.7089531,
+        "last_updated": 1755008593.708961
+      }
+    },
+    "4a6a746c24bcca35968f955908f5b512": {
+      "original_text": "·   \tagreed to audio recording of the discussion",
+      "translations": {
+        "agent": {
+          "text": "·   \takabvuma kurekodhwa kwenzwi kwenhaurirano",
+          "confidence": 0.9,
+          "timestamp": 1755008625.1376011
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008625.137598,
+        "last_updated": 1755008625.137602
+      }
+    },
+    "a6f395b7988a9e67a75890d4a61ff751": {
+      "original_text": "At this point, do you have any questions about the purpose of the study, or the documents you’ve been given [e.g. PIS/ consent form]? Is there anything that isn’t clear?",
+      "translations": {
+        "agent": {
+          "text": "Panguva ino, mune mibvunzo here nezve chinangwa chekudzidza, kana pamusoro pemagwaro amapiwa [semuenzaniso, PIS/ fomu rekubvuma]? Pane chero chinhu chisiri kujeka here?",
+          "confidence": 0.9,
+          "timestamp": 1755008640.602835
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008640.6028318,
+        "last_updated": 1755008640.602836
+      }
+    },
+    "24239df851d8cbe1be63449da03d0523": {
+      "original_text": "I just want to remind you that your participation in this workshop is entirely voluntary [i.e. it is your choice].",
+      "translations": {
+        "agent": {
+          "text": "Ndinongoda kukuyeuchidzai kuti kutora kwenyu chikamu pamusangano wekudzidzira (workshop) uyu ndezvekuzvidira zvachose [kureva kuti: sarudzo ndeyenyu].",
+          "confidence": 0.9,
+          "timestamp": 1755008651.272976
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008651.272973,
+        "last_updated": 1755008651.2729769
+      }
+    },
+    "1d43b73d80270226d87811f6b3772e91": {
+      "original_text": "Your opinions as a health care worker at the frontline of newborn care is very important to us. There are no right or wrong answers to these questions, just differing points of views. Keep in mind that we're just as interested in negative comments as positive comments. ",
+      "translations": {
+        "agent": {
+          "text": "Maonero enyu semushandi wehutano ari pamutsara wekutanga mukuchengetwa kwevana vachangoberekwa akakosha zvikuru kwatiri. Hapana mhinduro dzakarurama kana dzisiri izvo kumibvunzo iyi, ingori nemaonero akasiyana chete. Rangarirai kuti tine hanya zvakafanana nemashoko akaipa sezvatine hanya nemashoko akanaka.",
+          "confidence": 0.9,
+          "timestamp": 1755008667.083872
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008667.083869,
+        "last_updated": 1755008667.083873
+      }
+    },
+    "b886205f6a1eec182df85e0ff0270eb1": {
+      "original_text": "If you want to take a break or stop at any point, please tell me. And if you wish to withdraw from the study, you are completely free to do so at any point.",
+      "translations": {
+        "agent": {
+          "text": "Kana muchida kutora zororo kana kumira panguva ipi zvayo, ndapota ndizivisei. Uye kana muchida kurega kutora chikamu mukudzidza uku, makasununguka zvizere kuita izvozvo panguva ipi zvayo.",
+          "confidence": 0.9,
+          "timestamp": 1755008678.758066
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008678.758063,
+        "last_updated": 1755008678.758067
+      }
+    },
+    "6fb034347820006f9bfc636d3082a3ca": {
+      "original_text": "Before we start, do you have any questions for me?",
+      "translations": {
+        "agent": {
+          "text": "Tisati tatanga, mune mibvunzo kwandiri here?",
+          "confidence": 0.9,
+          "timestamp": 1755008682.8740082
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008682.874005,
+        "last_updated": 1755008682.8740091
+      }
+    },
+    "2c33a6945c634249f669861caabd0eb3": {
+      "original_text": "Phase 1: De-brief from observations of healthcare workers utilising Neotree’s clinical decision support system (30 minutes)",
+      "translations": {
+        "agent": {
+          "text": "Chikamu 1: Pfupiso kubva pakucherechedza kwevashandi vehutano vachishandisa hurongwa hwerutsigiro rwesarudzo yekiriniki hwe Neotree’s (maminitsi 30)",
+          "confidence": 0.9,
+          "timestamp": 1755008698.929667
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008698.929664,
+        "last_updated": 1755008698.9296682
+      }
+    },
+    "0e4f27c642b8f2b63cb601cb6a46f24f": {
+      "original_text": "Share back with the group a summary of observations from your previous two weeks. Ask for clarification on specific things that were unclear during the observation, or things we would want to know more about from the users.",
+      "translations": {
+        "agent": {
+          "text": "Dzoserai kuboka pfupiso yekucherechedza kubva pamavhiki maviri apfuura. Kumbirai tsananguro yakajeka pamusoro pezvimwe zvinhu zvisina kunyatsojeka panguva yekucherechedza, kana zvinhu zvatinoda kuziva zvakawanda pamusoro pazvo kubva kuvashandisi.",
+          "confidence": 0.9,
+          "timestamp": 1755008716.252151
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008716.252147,
+        "last_updated": 1755008716.252152
+      }
+    },
+    "3612fa864ec63b04ffb42548d3ca04f3": {
+      "original_text": "What have been key challenges to using Neotree’s clinical decision support?",
+      "translations": {
+        "agent": {
+          "text": "Ndezvipi zvipingamupinyi zvikuru pakushandisa Neotree’s rutsigiro rwesarudzo yekiriniki?",
+          "confidence": 0.9,
+          "timestamp": 1755008726.107662
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008726.107659,
+        "last_updated": 1755008726.1076632
+      }
+    },
+    "97e1c4a8234fb8f07371d95140a62a30": {
+      "original_text": "Have these been challenges from the beginning or are they more recent/ have these challenges changed or evolved over time?",
+      "translations": {
+        "agent": {
+          "text": "Matambudziko aya anga aripo kubvira pakutanga here kana kuti achangobva kuoneka/ matambudziko aya akachinja kana akashanduka nekufamba kwenguva here?",
+          "confidence": 0.9,
+          "timestamp": 1755009004.0820649
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009004.082062,
+        "last_updated": 1755009004.082067
+      }
+    },
+    "67a3d2ccbd20bdd4b42f8d6a05537d66": {
+      "original_text": "What have been key benefits or improvements from using Neotree’s clinical decision support system compared to before where there was no clinical decision support system?",
+      "translations": {
+        "agent": {
+          "text": "Ndeapi zvakanakira zvikuru kana kuvandudzwa zvakawanikwa kubva pakushandisa Neotree’s hurongwa hwerutsigiro rwesarudzo yekiriniki kana tichiienzanisa nenguva yapfuura apo pakanga pasina hurongwa hwerutsigiro rwesarudzo yekiriniki?",
+          "confidence": 0.9,
+          "timestamp": 1755009014.725734
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009014.725717,
+        "last_updated": 1755009014.725735
+      }
+    },
+    "a33720a890aee39a1808bc4b7fc40fd8": {
+      "original_text": "What do they feel has changed in their practice?",
+      "translations": {
+        "agent": {
+          "text": "Ndezvipi zvavanonzwa kuti zvachinja mukushanda kwavo kwekiriniki?",
+          "confidence": 0.9,
+          "timestamp": 1755009029.134144
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009029.134141,
+        "last_updated": 1755009029.134145
+      }
+    },
+    "e30e499a7e00339ca019b7806d7cbf2a": {
+      "original_text": "What do they feel has improved?",
+      "translations": {
+        "agent": {
+          "text": "Vanonzwa kuti chii chavandudzika?",
+          "confidence": 0.9,
+          "timestamp": 1755009044.384811
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009044.3848078,
+        "last_updated": 1755009044.384812
+      }
+    },
+    "54afbc13e0eb7914ce8b853cd2cfadc5": {
+      "original_text": "Now that they have experienced Neotree, if they had to build a clinical decision support system from scratch, how would they do it differently?",
+      "translations": {
+        "agent": {
+          "text": "Zvino sezvo vava neruzivo rweNeotree, kana vaifanira kuvaka hurongwa hwerutsigiro rwesarudzo yekiriniki kubva pakutanga, vaizviita sei zvakasiyana?",
+          "confidence": 0.9,
+          "timestamp": 1755009067.640733
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009067.6407301,
+        "last_updated": 1755009067.640734
+      }
+    },
+    "f461daddb35f1fc2e419dba8585f16ce": {
+      "original_text": "Functionality",
+      "translations": {
+        "agent": {
+          "text": "Mashandiro",
+          "confidence": 0.9,
+          "timestamp": 1755009073.262065
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009073.262062,
+        "last_updated": 1755009073.262066
+      }
+    },
+    "d76d59742feb016e6f6c92036a09a1be": {
+      "original_text": "Clinical content",
+      "translations": {
+        "agent": {
+          "text": "Zvemukati zvekiriniki",
+          "confidence": 0.9,
+          "timestamp": 1755009081.51198
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009081.511976,
+        "last_updated": 1755009081.511981
+      }
+    },
+    "635e0bef4fc4ee7c5870d9edd72e5b19": {
+      "original_text": "Integration with existing systems",
+      "translations": {
+        "agent": {
+          "text": "Kubatanidzwa nemahurongwa aripo",
+          "confidence": 0.9,
+          "timestamp": 1755009086.6206012
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009086.620598,
+        "last_updated": 1755009086.6206021
+      }
+    },
+    "41d8e72b4f5f3cc4857e431dec4e269c": {
+      "original_text": "User interface",
+      "translations": {
+        "agent": {
+          "text": "Chiso chemushandisi (User interface)",
+          "confidence": 0.9,
+          "timestamp": 1755009094.746016
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009094.746012,
+        "last_updated": 1755009094.746017
+      }
+    },
+    "6123d086898aa8834052cdc68729747c": {
+      "original_text": "What training have you received for the work you do?",
+      "translations": {
+        "agent": {
+          "text": "Ndeipi kudzidziswa kwamakapiwa kwebasa ramunoita?",
+          "confidence": 0.9,
+          "timestamp": 1755009101.984041
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009101.9840362,
+        "last_updated": 1755009101.984042
+      }
+    },
+    "73d8405ef5c120e10f990aae5681eb78": {
+      "original_text": "Clinical skills training",
+      "translations": {
+        "agent": {
+          "text": "Kudzidziswa kweunyanzvi hwekiriniki",
+          "confidence": 0.9,
+          "timestamp": 1755009110.4689522
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009110.468949,
+        "last_updated": 1755009110.4689531
+      }
+    },
+    "0e3257f2fa7e1b731e951cc6f41a76a7": {
+      "original_text": "Neotree training",
+      "translations": {
+        "agent": {
+          "text": "Kudzidziswa kweNeotree",
+          "confidence": 0.9,
+          "timestamp": 1755009115.139769
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009115.139767,
+        "last_updated": 1755009115.13977
+      }
+    },
+    "f1f39546466d92e67716b7cf9bbef8fd": {
+      "original_text": "Clinical",
+      "translations": {
+        "agent": {
+          "text": "Kiriniki",
+          "confidence": 0.9,
+          "timestamp": 1755009121.282732
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009121.282729,
+        "last_updated": 1755009121.282732
+      }
+    },
+    "2840180493ff3073dc8ed330c972437d": {
+      "original_text": "Technical",
+      "translations": {
+        "agent": {
+          "text": "Zvehunyanzvi",
+          "confidence": 0.9,
+          "timestamp": 1755009126.606134
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009126.6061282,
+        "last_updated": 1755009126.6061351
+      }
+    },
+    "0002fe054f97129684d2edee84947756": {
+      "original_text": "Do the healthcare workers feel the training they received from Neotree in using the clinical decision support functionality was sufficient?",
+      "translations": {
+        "agent": {
+          "text": "Vashandi vehutano vanofunga here kuti kudzidziswa kwavakagamuchira kubva kuNeotree pakushandisa mabasa (functionality) e rutsigiro rwesarudzo yekiriniki kwakakwana?",
+          "confidence": 0.9,
+          "timestamp": 1755009152.136585
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009152.1365829,
+        "last_updated": 1755009152.136586
+      }
+    },
+    "582e1c228cfa2721de40aaaf8be670b7": {
+      "original_text": "If not, what else would they find helpful?",
+      "translations": {
+        "agent": {
+          "text": "Kana zvisiri, ndezvipi zvimwe zvavaizoona zvichivabatsira?",
+          "confidence": 0.9,
+          "timestamp": 1755009165.509233
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009165.5092301,
+        "last_updated": 1755009165.509234
+      }
+    },
+    "d866c4b16642fa9724d057715661ccd5": {
+      "original_text": "Phase 2: Ideas around Artificial intelligence (30 minutes)",
+      "translations": {
+        "agent": {
+          "text": "Chikamu 2: Pfungwa pamusoro pe Artificial intelligence (maminitsi 30)",
+          "confidence": 0.9,
+          "timestamp": 1755009174.889531
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009174.8894951,
+        "last_updated": 1755009174.8895319
+      }
+    },
+    "0cdfd842775784b272f40d3162f0430d": {
+      "original_text": "What do you understand by ‘artificial intelligence’? Have you come across any AI-enabled technology in your personal or professional activities?",
+      "translations": {
+        "agent": {
+          "text": "Chii chamunonzwisisa ne ‘artificial intelligence’? Makambosangana here nechero hunyanzvi hweAI-enabled muzviitiko zvenyu zvemunhu kana zvebasa?",
+          "confidence": 0.9,
+          "timestamp": 1755009188.658061
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009188.658058,
+        "last_updated": 1755009188.6580632
+      }
+    },
+    "7b425f71b34cf508fdbb320c5cc678e0": {
+      "original_text": "What are your expectations of what AI could do in your facility?",
+      "translations": {
+        "agent": {
+          "text": "Ndezvipi zvamunotarisira kuti AI ingakwanise kuita munzvimbo yehutano yenyu?",
+          "confidence": 0.9,
+          "timestamp": 1755009200.412435
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009200.412432,
+        "last_updated": 1755009200.412437
+      }
+    },
+    "ef0dd7fc27bfc01957ed11abbae51795": {
+      "original_text": "How might AI be able to support with clinical decision support?",
+      "translations": {
+        "agent": {
+          "text": "AI ingabatsira sei mukupa rutsigiro rwesarudzo yekiriniki?",
+          "confidence": 0.9,
+          "timestamp": 1755009223.283632
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009223.283623,
+        "last_updated": 1755009223.283634
+      }
+    },
+    "1595a00962039c4174fa12fce0eba895": {
+      "original_text": "Do you have any concerns or reservations about AI being involved in clinical care?",
+      "translations": {
+        "agent": {
+          "text": "Mune here kunetseka kana kusahadzika nezve kubatanidzwa kwe AI mukutarisirwa kwekiriniki?",
+          "confidence": 0.9,
+          "timestamp": 1755009236.7741282
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009236.774125,
+        "last_updated": 1755009236.774129
+      }
+    },
+    "fe7974a551a85b706fbcc7eaaab215ba": {
+      "original_text": "What might be some of your concerns if Neotree were developed to become AI-enabled?",
+      "translations": {
+        "agent": {
+          "text": "Ndezvipi zvamungangonetseka nazvo dai Neotree yaivandudzwa kuti ive AI-enabled?",
+          "confidence": 0.9,
+          "timestamp": 1755009254.7391412
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009254.739136,
+        "last_updated": 1755009254.739143
+      }
+    },
+    "9416232516105e3035d517dcd12571a7": {
+      "original_text": "Phase 3: Adapting measures of usability and user experience (30 minutes)",
+      "translations": {
+        "agent": {
+          "text": "Chikamu 3: Kugadzirisa zviyero zvekushandisika neruzivo rwemushandisi (maminitsi 30)",
+          "confidence": 0.9,
+          "timestamp": 1755009262.087302
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009262.087296,
+        "last_updated": 1755009262.087303
+      }
+    },
+    "e0540a4edcee36658ba4fc0f3e4f55f9": {
+      "original_text": "Share with healthcare workers the Healthcare Systems Usability Scale for Clinical Decision Support Systems.",
+      "translations": {
+        "agent": {
+          "text": "Govanai Healthcare Systems Usability Scale for Clinical Decision Support Systems kuvashandi vehutano.",
+          "confidence": 0.9,
+          "timestamp": 1755009279.963079
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009279.963073,
+        "last_updated": 1755009279.963081
+      }
+    },
+    "5c916ae5f3f201cf317d2401758496d8": {
+      "original_text": "Review the questionnaire",
+      "translations": {
+        "agent": {
+          "text": "Ongororai mubvunzo",
+          "confidence": 0.9,
+          "timestamp": 1755009295.250415
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009295.25041,
+        "last_updated": 1755009295.250417
+      }
+    },
+    "8af24587b3845f517d8d2fc504bedfb5": {
+      "original_text": "Which of these existing questions make sense to you? Which ones don’t?",
+      "translations": {
+        "agent": {
+          "text": "Ndedzipi mibvunzo iripo idzi dzinonzwisisika kwamuri? Ndedzipi mibvunzo isinganzwisisike kwamuri?",
+          "confidence": 0.9,
+          "timestamp": 1755009316.359369
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009316.359366,
+        "last_updated": 1755009316.359371
+      }
+    },
+    "96ec4f4326216095d16c7dcb8a0f080d": {
+      "original_text": "Are there any questions which are unclear or hard to understand?",
+      "translations": {
+        "agent": {
+          "text": "Pane chero mibvunzo isinganyatso kujeka kana yakaoma kunzwisisa here?",
+          "confidence": 0.9,
+          "timestamp": 1755009322.29471
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009322.294707,
+        "last_updated": 1755009322.294711
+      }
+    },
+    "87f31f2664055abdf9dabe55ff49287c": {
+      "original_text": "Are there any local challenges (e.g., internet access, staffing, time pressure) that affect your experience using technology and should be reflected in how we measure success? ",
+      "translations": {
+        "agent": {
+          "text": "Pane here zvipingamupinyi zvemuno (semuenzaniso, kuwanikwa kweindaneti, kuwanikwa kwevashandi, kumanikidzwa kwenguva) zvinokanganisa ruzivo rwenyu pakushandisa hunyanzvi uye zvinofanira kuratidzwa mukuyera kwatinoita kubudirira?",
+          "confidence": 0.9,
+          "timestamp": 1755009357.28475
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009357.284745,
+        "last_updated": 1755009357.284752
+      }
+    },
+    "8441afad9f3a6a9c4d0eb539a963fde9": {
+      "original_text": "Can you think of how you might rephrase any question?",
+      "translations": {
+        "agent": {
+          "text": "Munogona kufunga kuti mungataura patsva sei mubvunzo upi zvawo?",
+          "confidence": 0.9,
+          "timestamp": 1755009366.225939
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009366.225936,
+        "last_updated": 1755009366.225941
+      }
+    },
+    "38cddbe95002d2d05f5a9c6caec15c4a": {
+      "original_text": "Are there questions you would like to remove from this scale?",
+      "translations": {
+        "agent": {
+          "text": "Pane mibvunzo yamungada kubvisa pachiyero ichi here?",
+          "confidence": 0.9,
+          "timestamp": 1755009372.371407
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009372.371404,
+        "last_updated": 1755009372.371409
+      }
+    },
+    "20c1bfde1a6391ab036854317f71becd": {
+      "original_text": "Are there questions you would like to add to this scale?",
+      "translations": {
+        "agent": {
+          "text": "Pane mibvunzo yamungade kuwedzera pachiyero ichi here?",
+          "confidence": 0.9,
+          "timestamp": 1755009379.43486
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009379.434858,
+        "last_updated": 1755009379.434861
+      }
+    },
+    "685c2882470c40e6a59fe728d2b7af10": {
+      "original_text": "Would you prefer to answer usability questions verbally, on paper, or another way?",
+      "translations": {
+        "agent": {
+          "text": "Mungafarira kupindura mibvunzo yekushandisika muchitaura, papepa, kana nenzira imwe here?",
+          "confidence": 0.9,
+          "timestamp": 1755009386.617152
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009386.617148,
+        "last_updated": 1755009386.6171541
+      }
+    },
+    "a08e8e100070896fd2e47f1b92a52dc8": {
+      "original_text": "What would make it easy for you or your colleagues to give honest feedback about using this tool?",
+      "translations": {
+        "agent": {
+          "text": "Chii chingaita kuti zvive nyore kwauri kana kune vashandi vaunoshanda navo kupa mhinduro dzakatendeseka pamusoro pekushandisa chishandiso ichi?",
+          "confidence": 0.9,
+          "timestamp": 1755009395.7881
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009395.7880971,
+        "last_updated": 1755009395.788102
+      }
+    },
+    "b25737ddc64722ff4702e2ae3f9ea044": {
+      "original_text": "When you think about using a tool like this, what would make it feel easy or hard to use?",
+      "translations": {
+        "agent": {
+          "text": "Paunenge uchifunga nezvekushandisa chishandiso chakadai, ndezvipi zvingaita kuti chive nyore kana kuti chiome kushandisa?",
+          "confidence": 0.9,
+          "timestamp": 1755009405.2783601
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009405.278357,
+        "last_updated": 1755009405.278362
+      }
+    },
+    "ab53f52440834191e275d9d2faf2200e": {
+      "original_text": "What would a good user experience feel like to you?",
+      "translations": {
+        "agent": {
+          "text": "Ruzivo rwakanaka rwemushandisi runonzwa sei kwauri?",
+          "confidence": 0.9,
+          "timestamp": 1755009419.547621
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009419.54762,
+        "last_updated": 1755009419.547622
+      }
+    },
+    "618cf7a2ecb18cdd250a5a81c04108c5": {
+      "original_text": "Can you describe a time you used a technology or system that worked really well? What made it work?",
+      "translations": {
+        "agent": {
+          "text": "Munogona here kutsanangura nguva yamakashandisa hunyanzvi kana hurongwa hwakashanda zvakanaka chaizvo? Chii chakaita kuti hushande zvakanaka kudaro?",
+          "confidence": 0.9,
+          "timestamp": 1755009426.229163
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009426.229162,
+        "last_updated": 1755009426.2291641
+      }
+    },
+    "a76e4bf198fd0aa94b9e862138250d81": {
+      "original_text": "Can you describe a time when technology made your job harder? What went wrong?",
+      "translations": {
+        "agent": {
+          "text": "Munogona here kutsanangura nguva iyo hunyanzvi hwakaita kuti basa renyu riome? Chii chakakanganisika?",
+          "confidence": 0.9,
+          "timestamp": 1755009440.605956
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009440.605952,
+        "last_updated": 1755009440.605958
+      }
+    },
+    "2bc0e1c8292fec40da28338a79e4faf5": {
+      "original_text": "What kind of words or phrases should we avoid when measuring ease of use or satisfaction in this setting?",
+      "translations": {
+        "agent": {
+          "text": "Ndeapi marudzi emazwi kana zvirevo zvatinofanira kudzivisa pakuyera kureruka kwekushandisa kana kugutsikana mumamiriro aya?",
+          "confidence": 0.9,
+          "timestamp": 1755009452.638251
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009452.638243,
+        "last_updated": 1755009452.638253
+      }
+    },
+    "f8f4c40a9fd544a50b5d0645970d7563": {
+      "original_text": "Semi-structured interview guide #1 (Healthcare workers)",
+      "translations": {
+        "agent": {
+          "text": "Gwara rebvunzurudzo yakarongwa zvishoma (semi-structured) #1 (Vashandi vehutano)",
+          "confidence": 0.9,
+          "timestamp": 1755009461.35474
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009461.354738,
+        "last_updated": 1755009461.354741
+      }
+    },
+    "66efc79f4d07dde3bb786fe132795660": {
+      "original_text": "Objective: To understand healthcare worker’s experience of interacting with Neotree’s clinical decision support functionality, what role it plays in their clinical decision making, and healthcare worker;s attitudes towards artificial intelligence supporting clinical work. ",
+      "translations": {
+        "agent": {
+          "text": "Chinangwa: Kunzwisisa ruzivo rwevashandi vehutano rwekudyidzana neNeotree’s rutsigiro rwesarudzo yekiriniki (functionality), nebasa rinoitwa nerutsigiro urwu mukuita kwavo zvisarudzo zvekiriniki, uye maonero evashandi vehutano pamusoro pe artificial intelligence inotsigira basa rekiriniki.",
+          "confidence": 0.9,
+          "timestamp": 1755009488.079301
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009488.079297,
+        "last_updated": 1755009488.079303
+      }
+    },
+    "1d90ac9ccb355b124918976e9ffd5f1e": {
+      "original_text": "Site: Sally Mugabe Central Hospital; Chinhoyi Provincial Hospital; Kamuzu Central Hospital; Kasungu District Hospital",
+      "translations": {
+        "agent": {
+          "text": "Nzvimbo: Sally Mugabe Central Hospital; Chinhoyi Provincial Hospital; Kamuzu Central Hospital; Kasungu District Hospital",
+          "confidence": 0.9,
+          "timestamp": 1755009495.031688
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009495.031685,
+        "last_updated": 1755009495.031689
+      }
+    },
+    "f3f665b21e1e0e9e9dcc1a8414f306fa": {
+      "original_text": "Participants: Healthcare workers (4 per site)",
+      "translations": {
+        "agent": {
+          "text": "Vatori vechikamu: vashandi vehutano (4 panzvimbo imwe neimwe)",
+          "confidence": 0.9,
+          "timestamp": 1755009499.802807
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009499.802803,
+        "last_updated": 1755009499.802808
+      }
+    },
+    "0495e1789bce20456f5095102e970508": {
+      "original_text": "Methodology: Semi-structured interview",
+      "translations": {
+        "agent": {
+          "text": "Maitiro: Bvunzurudzo yakarongwa zvishoma (semi-structured interview)",
+          "confidence": 0.9,
+          "timestamp": 1755009513.480478
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009513.480473,
+        "last_updated": 1755009513.48048
+      }
+    },
+    "a512dedf7aabd2e9b029115e3f80cc35": {
+      "original_text": "I just want to remind you that your participation in this discussion is entirely voluntary [i.e. it is your choice].",
+      "translations": {
+        "agent": {
+          "text": "Ndinongoda kukuyeuchidzai kuti kutora chikamu kwenyu munhaurirano iyi ndewekuzvidira zvachose [ndiko kuti, sarudzo yenyu].",
+          "confidence": 0.9,
+          "timestamp": 1755009578.8186612
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009578.818658,
+        "last_updated": 1755009578.818662
+      }
+    },
+    "980af5164e1c6b77b9d6eb5a941c44f5": {
+      "original_text": "If you want to take a break or stop at any point, please tell me. And if you wish to withdraw from the study you are completely free to do so at any point.",
+      "translations": {
+        "agent": {
+          "text": "Kana muchida kutora zororo kana kumira panguva ipi zvayo, ndapota ndizivisei. Uyezve, kana muchida kurega kutora chikamu mukudzidza, makasununguka zvachose kuzviita panguva ipi zvayo.",
+          "confidence": 0.9,
+          "timestamp": 1755009634.888899
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009634.888895,
+        "last_updated": 1755009634.8889012
+      }
+    },
+    "9624fc89b58192492959e9d27d139686": {
+      "original_text": "1. Warm up questions",
+      "translations": {
+        "agent": {
+          "text": "1. Mibvunzo yekutanga yekuzivana",
+          "confidence": 0.9,
+          "timestamp": 1755009642.989942
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009642.989939,
+        "last_updated": 1755009642.989944
+      }
+    },
+    "695e04e16f809284557a9c7924c0fdc8": {
+      "original_text": "What is your position at this facility?",
+      "translations": {
+        "agent": {
+          "text": "Chinzvimbo chenyu chii panzvimbo yehutano iyi?",
+          "confidence": 0.9,
+          "timestamp": 1755009650.352774
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009650.35277,
+        "last_updated": 1755009650.3527749
+      }
+    },
+    "546bb31ae93cd73be307e80a746dc9d9": {
+      "original_text": "How long have you worked as a ____?",
+      "translations": {
+        "agent": {
+          "text": "Manga muchishanda kwenguva yakareba sei se ____?",
+          "confidence": 0.9,
+          "timestamp": 1755009659.292628
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009659.2926238,
+        "last_updated": 1755009659.29263
+      }
+    },
+    "473954297585592ad7b6b2fc2c0fc5d8": {
+      "original_text": "How long have you worked in this facility?",
+      "translations": {
+        "agent": {
+          "text": "Mave kushanda munzvimbo yehutano iyi kwenguva yakareba sei?",
+          "confidence": 0.9,
+          "timestamp": 1755009671.380061
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009671.380058,
+        "last_updated": 1755009671.3800619
+      }
+    },
+    "5301f551c19ed2335e7f1b80e246b282": {
+      "original_text": "2. Clinical context and conditions",
+      "translations": {
+        "agent": {
+          "text": "2. Mamiriro ekiriniki uye zvirwere",
+          "confidence": 0.9,
+          "timestamp": 1755009684.0017831
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009684.00178,
+        "last_updated": 1755009684.001784
+      }
+    },
+    "5b05cdc4d0b8d4efa05421baf79184fb": {
+      "original_text": "How would you describe the Neotree application? Do you use it? How often? When?",
+      "translations": {
+        "agent": {
+          "text": "Mungatsanangura sei Neotree application? Munorishandisa here? Munorishandisa kangani? Munorishandisa rinhi?",
+          "confidence": 0.9,
+          "timestamp": 1755009711.6135418
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009711.6135402,
+        "last_updated": 1755009711.6135418
+      }
+    },
+    "99c128b5002dd3a70ab55da7659d176c": {
+      "original_text": "What has been your experience of the CDS functionality? ",
+      "translations": {
+        "agent": {
+          "text": "Ruzivo rwenyu nezvemashandiro eCDS rwakaita sei?",
+          "confidence": 0.9,
+          "timestamp": 1755009769.71816
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009769.718157,
+        "last_updated": 1755009769.7181609
+      }
+    },
+    "df6a07e50ba29a0baf13f25e3feab600": {
+      "original_text": "What types of health conditions or clinical decisions do you use the CDS for?",
+      "translations": {
+        "agent": {
+          "text": "Munoshandisa CDS pamhando dzipi dzemamiriro ehutano kana sarudzo dzekiriniki?",
+          "confidence": 0.9,
+          "timestamp": 1755009795.176733
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009795.1767302,
+        "last_updated": 1755009795.176735
+      }
+    },
+    "a3aecb741b34930680892546249f8a1d": {
+      "original_text": "Is it harder or easier for some conditions? Or, do you trust it more or less for some conditions?",
+      "translations": {
+        "agent": {
+          "text": "Zvakaoma here kana zviri nyore kune mamwe mamiriro ezveutano? Kana kuti munovimba nazvo zvakanyanya kana zvishoma here kune mamwe mamiriro ezveutano?",
+          "confidence": 0.9,
+          "timestamp": 1755009833.4705951
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009833.470592,
+        "last_updated": 1755009833.470597
+      }
+    },
+    "9887a6b9aa560b525b8ee802320c162c": {
+      "original_text": "Are there situations where you choose not to use the CDS? Why? (e.g. emergency situations)",
+      "translations": {
+        "agent": {
+          "text": "Pane mamiriro ezvinhu amunosarudza kusashandisa CDS here? Nei? (semuenzaniso, mamiriro ekukurumidzira)",
+          "confidence": 0.9,
+          "timestamp": 1755009847.009421
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009847.0094159,
+        "last_updated": 1755009847.009423
+      }
+    },
+    "7e8d6fee06e3a6cd2e2f6f88c8cdbc01": {
+      "original_text": "3. Decision-making process and role of the CDS",
+      "translations": {
+        "agent": {
+          "text": "3. Maitiro ekuita sarudzo uye basa reCDS",
+          "confidence": 0.9,
+          "timestamp": 1755009858.833907
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009858.8338969,
+        "last_updated": 1755009858.833909
+      }
+    },
+    "cbc98720d633b4fba3f1575dbe9d2218": {
+      "original_text": "Can you walk me through an example (e.g., a recent case) where you used the CDS?",
+      "translations": {
+        "agent": {
+          "text": "Mungandifambisa nhanho nenhanho nemuenzaniso (semuenzaniso, nyaya ichangobva kuitika) pamamakashandisa CDS?",
+          "confidence": 0.9,
+          "timestamp": 1755009878.125794
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009878.125792,
+        "last_updated": 1755009878.1257951
+      }
+    },
+    "9e6a682f447ea626bca8e271c09a680c": {
+      "original_text": "Did you use it before, during, or after forming your own clinical judgment?",
+      "translations": {
+        "agent": {
+          "text": "Makachishandisa here pamberi pekuumba kufunga kwenyu kwekiriniki (clinical judgment), panguva yekuumbako, kana mushure mekuumbako?",
+          "confidence": 0.9,
+          "timestamp": 1755009909.456209
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009909.456206,
+        "last_updated": 1755009909.4562109
+      }
+    },
+    "d82153bcd55331feb34433990d5dd9ab": {
+      "original_text": "Do you use the CDS to make decisions or to validate/confirm your own thinking?",
+      "translations": {
+        "agent": {
+          "text": "Munoshandisa here CDS kutora sarudzo kana kuti kuona kana zvamunenge mafunga zviri izvo?",
+          "confidence": 0.9,
+          "timestamp": 1755009930.138916
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009930.138913,
+        "last_updated": 1755009930.1389172
+      }
+    },
+    "100a986fff8a3256d64c1b7811df5f64": {
+      "original_text": "Is the suggested diagnosis or management actionable? ",
+      "translations": {
+        "agent": {
+          "text": "Kuongororwa kana kutarisirwa kwakakurudzirwa kune matanho anogona kutorwa here?",
+          "confidence": 0.9,
+          "timestamp": 1755009941.8651881
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009941.865185,
+        "last_updated": 1755009941.865189
+      }
+    },
+    "ba916b5cebf9aa74b5eeb0e72d96d62d": {
+      "original_text": "If not, why not?",
+      "translations": {
+        "agent": {
+          "text": "Kana zvisiri, sei?",
+          "confidence": 0.9,
+          "timestamp": 1755009948.3165271
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009948.316525,
+        "last_updated": 1755009948.3165288
+      }
+    },
+    "fb3b78333aac46930ec3be1b7a6eec54": {
+      "original_text": "4. Trust, Confidence, and Overrides ",
+      "translations": {
+        "agent": {
+          "text": "4. Kuvimba, Chivimbo, uye Kupfuura Mirayiridzo (overrides)",
+          "confidence": 0.9,
+          "timestamp": 1755009958.580527
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009958.580524,
+        "last_updated": 1755009958.580528
+      }
+    },
+    "49ea6f59295ac33ef4266291d134bc9f": {
+      "original_text": "How confident are you in the CDS recommendations?",
+      "translations": {
+        "agent": {
+          "text": "Mune chivimbo chakadii nezviratidziro zveCDS?",
+          "confidence": 0.9,
+          "timestamp": 1755009969.959048
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009969.9590452,
+        "last_updated": 1755009969.959049
+      }
+    },
+    "320414e14d084e2ca00fd23892084b66": {
+      "original_text": "Have there been times when you disagreed with the CDS? What did you do?",
+      "translations": {
+        "agent": {
+          "text": "Pane here nguva dzamakambosawirirana neCDS? Makaita sei?",
+          "confidence": 0.9,
+          "timestamp": 1755009985.826566
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009985.8265631,
+        "last_updated": 1755009985.826568
+      }
+    },
+    "ecd060b4e02e466243f684537c9a1260": {
+      "original_text": "What factors make you more or less likely to trust the CDS? ",
+      "translations": {
+        "agent": {
+          "text": "Ndeapi zvinhu kana zvikonzero zvinoita kuti muvimbe zvakanyanya kana zvishoma neCDS?",
+          "confidence": 0.9,
+          "timestamp": 1755009998.241128
+        }
+      },
+      "metadata": {
+        "first_seen": 1755009998.241125,
+        "last_updated": 1755009998.2411299
+      }
+    },
+    "ec7534abce373f5b43f5624c45e7422b": {
+      "original_text": "5. Technology and Usability",
+      "translations": {
+        "agent": {
+          "text": "5. Hunyanzvi uye Kushandisika",
+          "confidence": 0.9,
+          "timestamp": 1755010006.910911
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010006.910908,
+        "last_updated": 1755010006.910913
+      }
+    },
+    "f7250449b84b4b0922f7d0a00a8df393": {
+      "original_text": "How easy is it to use the CDS in your day-to-day work?",
+      "translations": {
+        "agent": {
+          "text": "Kushandisa CDS zviri nyore sei mubasa renyu rezuva nezuva?",
+          "confidence": 0.9,
+          "timestamp": 1755010014.2239091
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010014.223906,
+        "last_updated": 1755010014.2239108
+      }
+    },
+    "2433cacb412e03878867a0ac3de5eb28": {
+      "original_text": "Are there features or functions that are particularly helpful or unhelpful?",
+      "translations": {
+        "agent": {
+          "text": "Pane zvimiro kana mabasa anonyanya kubatsira kana asingabatsiri here?",
+          "confidence": 0.9,
+          "timestamp": 1755010018.7224278
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010018.722419,
+        "last_updated": 1755010018.722429
+      }
+    },
+    "1909546780aafb780202e1b8396bd3d5": {
+      "original_text": "Do you experience any technical issues (e.g., downtime, slow response, errors)?",
+      "translations": {
+        "agent": {
+          "text": "Munombosangana nematambudziko ehunyanzvi here (semuenzaniso, nguva yekusashanda (downtime), mhinduro inonoka, kana zvikanganiso)?",
+          "confidence": 0.9,
+          "timestamp": 1755010030.7214599
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010030.721457,
+        "last_updated": 1755010030.721461
+      }
+    },
+    "75203c0953adfe05aa37aded0ba5d472": {
+      "original_text": "6. Efficiency and Cognitive Load",
+      "translations": {
+        "agent": {
+          "text": "6. Kushanda zvakanaka uye Mutoro wePfungwa (Cognitive Load)",
+          "confidence": 0.9,
+          "timestamp": 1755010038.956706
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010038.956703,
+        "last_updated": 1755010038.956707
+      }
+    },
+    "f0bcf71887ad83187445e36adbaf96cb": {
+      "original_text": "Does using the CDS save time or slow you down?",
+      "translations": {
+        "agent": {
+          "text": "Kushandisa CDS kunochengetedza nguva here kana kunonokeredza basa renyu?",
+          "confidence": 0.9,
+          "timestamp": 1755010122.63202
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010122.632017,
+        "last_updated": 1755010122.632022
+      }
+    },
+    "02ca9db7e4503bbc50ba30fec60d434d": {
+      "original_text": "Do you feel it helps reduce your mental effort or workload?",
+      "translations": {
+        "agent": {
+          "text": "Munonzwa here kuti zvinobatsira kuderedza kuedza kwepfungwa dzenyu kana mutoro webasa?",
+          "confidence": 0.9,
+          "timestamp": 1755010132.70602
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010132.706016,
+        "last_updated": 1755010132.706023
+      }
+    },
+    "aa6678a501b4e7379f721a494255dd3b": {
+      "original_text": "In busy or stressful moments, do you still rely on the CDS? Why or why not?",
+      "translations": {
+        "agent": {
+          "text": "Pamunguva dzine mabasa akawanda kana dzinokonzera kushushikana, muchiri kutsamira paCDS here? Nei kana kuti sei musina?",
+          "confidence": 0.9,
+          "timestamp": 1755010144.436131
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010144.436126,
+        "last_updated": 1755010144.4361322
+      }
+    },
+    "e192d6ad21f37829b5b0ab70307a2304": {
+      "original_text": "7. Value and Perceived Benefits",
+      "translations": {
+        "agent": {
+          "text": "7. Kukosha uye Zvibatsiro Zvinoonekwa",
+          "confidence": 0.9,
+          "timestamp": 1755010351.666804
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010351.666801,
+        "last_updated": 1755010351.666805
+      }
+    },
+    "e6519651132c9d8dcf720cbebf25517f": {
+      "original_text": "What do you think is the main benefit of the CDS for you and for your patients?",
+      "translations": {
+        "agent": {
+          "text": "Munofungei kuti ndeipi batsiro guru reCDS kwamuri uye kuvarwere venyu?",
+          "confidence": 0.9,
+          "timestamp": 1755010462.2644548
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010462.2644532,
+        "last_updated": 1755010462.264456
+      }
+    },
+    "324992cecd4b61b231aeb8bffa38b517": {
+      "original_text": "Does it help improve care quality or patient outcomes, in your view?",
+      "translations": {
+        "agent": {
+          "text": "Pamaonero enyu, zvinobatsira here kuvandudza kunaka kwerubatsiro rwehutano kana mhedzisiro dzevarwere?",
+          "confidence": 0.9,
+          "timestamp": 1755010478.6155
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010478.6154969,
+        "last_updated": 1755010478.615502
+      }
+    },
+    "13bd4a5de799618f69c6aafdaafc3e21": {
+      "original_text": "Does it help improve service outcomes, in your view (e.g., equity, timeliness, safety)?",
+      "translations": {
+        "agent": {
+          "text": "Mumaonero enyu, zvinobatsira here kuvandudza mhedzisiro yesevhisi (semuenzaniso, kuenzana (equity), kupihwa nenguva (timeliness), kuchengeteka)?",
+          "confidence": 0.9,
+          "timestamp": 1755010490.090156
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010490.090153,
+        "last_updated": 1755010490.090157
+      }
+    },
+    "9021e6d08ca9b0263a454bdf0dc71b64": {
+      "original_text": "Would you recommend it to other health workers?",
+      "translations": {
+        "agent": {
+          "text": "Ungakurudzira izvi kuvamwe vashandi vehutano here?",
+          "confidence": 0.9,
+          "timestamp": 1755010674.10774
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010674.107736,
+        "last_updated": 1755010674.107742
+      }
+    },
+    "87a34b02c27c85b7b1babcb5ea912593": {
+      "original_text": "8. Experience, Expertise, and Heuristics ",
+      "translations": {
+        "agent": {
+          "text": "8. Ruzivo, Unyanzvi, uye Nzira dzekukurumidza kufunga (heuristics)",
+          "confidence": 0.9,
+          "timestamp": 1755010694.076973
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010694.076969,
+        "last_updated": 1755010694.0769742
+      }
+    },
+    "33a38944ba323cb192ff013533648f09": {
+      "original_text": "How does your clinical experience shape how you use or interpret the CDS?",
+      "translations": {
+        "agent": {
+          "text": "Ruzivo rwenyu rwekiriniki runoumba sei maitiro enyu ekushandisa kana kududzira CDS?",
+          "confidence": 0.9,
+          "timestamp": 1755010729.620573
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010729.620571,
+        "last_updated": 1755010729.620574
+      }
+    },
+    "aface4e660541bcc75ac4105a231eba3": {
+      "original_text": "Are there times when your “gut feeling” overrides what the CDS suggests?",
+      "translations": {
+        "agent": {
+          "text": "Pane nguva apo “gut feeling” yenyu inodarika zvinokurudzirwa neCDS here?",
+          "confidence": 0.9,
+          "timestamp": 1755010746.027898
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010746.027895,
+        "last_updated": 1755010746.0279
+      }
+    },
+    "fcd18c45f1c37fa01c81ce4767bc01ae": {
+      "original_text": "9. Training, Support, and Organizational Readiness",
+      "translations": {
+        "agent": {
+          "text": "9. Kudzidziswa, Rutsigiro, uye Kugadzirira kweSangano (organizational readiness)",
+          "confidence": 0.9,
+          "timestamp": 1755010754.904438
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010754.904435,
+        "last_updated": 1755010754.904439
+      }
+    },
+    "45469d91ca817638fb168d49d6b9c539": {
+      "original_text": "Did you receive training on how to use the CDS? If yes, who did you receive the training from? Can you remember the contents of the training? Was it helpful?",
+      "translations": {
+        "agent": {
+          "text": "Makapiwa kudzidziswa pamusoro pekushandisa CDS here? Kana hongu, makapiwa kudzidziswa uku kubva kune ani? Munorangarira zvemukati mekudzidziswa here? Zvakabatsira here?",
+          "confidence": 0.9,
+          "timestamp": 1755010770.768047
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010770.768045,
+        "last_updated": 1755010770.768048
+      }
+    },
+    "f906e9366ebd45146badb9f4dc862e86": {
+      "original_text": "Do you feel supported by your facility or supervisors in using it?",
+      "translations": {
+        "agent": {
+          "text": "Munonzwa kuti muri kuwana rutsigiro kubva kunzvimbo yehutano yenyu kana vatariri venyu pakushandisa here?",
+          "confidence": 0.9,
+          "timestamp": 1755010781.890336
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010781.890333,
+        "last_updated": 1755010781.890338
+      }
+    },
+    "548ec295ab2e6c70551be1a4a7c01bd5": {
+      "original_text": "Is it integrated into your normal clinical workflow? How/ how not?",
+      "translations": {
+        "agent": {
+          "text": "Rakabatanidzwa here mumukufamba webasa renyu rwekiriniki rwezuva nezuva? Rinobatanidzwa sei? Kana kuti sei risingabatanidzwi?",
+          "confidence": 0.9,
+          "timestamp": 1755010886.388542
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010886.3885398,
+        "last_updated": 1755010886.388543
+      }
+    },
+    "cd9ef323750c2cb42e870846a16d74ed": {
+      "original_text": "10. Peer Influence and Team Use ",
+      "translations": {
+        "agent": {
+          "text": "10. Kufurirwa kweVezera uye Kushandiswa kweChikwata",
+          "confidence": 0.9,
+          "timestamp": 1755010892.306078
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010892.3060741,
+        "last_updated": 1755010892.306079
+      }
+    },
+    "c05cf56b2fa7578e707310bdef569fd1": {
+      "original_text": "How do your colleagues use the CDS? Is it consistent across the team?",
+      "translations": {
+        "agent": {
+          "text": "Vaunoshanda navo vanoshandisa sei CDS? Kushandiswa kwayo kunoenderana here pakati pechikwata chese?",
+          "confidence": 0.9,
+          "timestamp": 1755010913.905289
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010913.905287,
+        "last_updated": 1755010913.905291
+      }
+    },
+    "2eca77d7750c9f52b12a4e074b30359a": {
+      "original_text": "Do you discuss or cross-check the CDS recommendations with others?",
+      "translations": {
+        "agent": {
+          "text": "Munokurukura kana kuongorora pamwe nevamwe here zviratidziro zverutsigiro rwesarudzo yekiriniki (CDS)?",
+          "confidence": 0.9,
+          "timestamp": 1755010950.0698931
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010950.06989,
+        "last_updated": 1755010950.0698938
+      }
+    },
+    "1d83aa4e4bb73097b91f6b97b483724b": {
+      "original_text": "Have there been any tensions or disagreements about using it?",
+      "translations": {
+        "agent": {
+          "text": "Pane here kukakavadzana kana kusawirirana nezvekushandisa kwacho?",
+          "confidence": 0.9,
+          "timestamp": 1755010954.89609
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010954.896086,
+        "last_updated": 1755010954.896092
+      }
+    },
+    "3310e215b0de133e012419006990e632": {
+      "original_text": "11. System-Level and Policy Environment",
+      "translations": {
+        "agent": {
+          "text": "11. Padanho rehurongwa uye nharaunda yemitemo",
+          "confidence": 0.9,
+          "timestamp": 1755010964.5084522
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010964.508447,
+        "last_updated": 1755010964.5084538
+      }
+    },
+    "3642537fe072b76caae9b5fa1fec5926": {
+      "original_text": "Are there any organisational policies or local regulations that support or limit use of this CDS?",
+      "translations": {
+        "agent": {
+          "text": "Pane here mitemo yesangano kana mirau yemunharaunda inotsigira kana inoisa miganhu pakushandiswa kweCDS iyi?",
+          "confidence": 0.9,
+          "timestamp": 1755010980.962643
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010980.962639,
+        "last_updated": 1755010980.962645
+      }
+    },
+    "10544ad23b6550a677b151c4406e429f": {
+      "original_text": "Are there data privacy, security, or ethical concerns that affect your use of it?",
+      "translations": {
+        "agent": {
+          "text": "Pane here nyaya dzekuvanzika kwe data, chengetedzo, kana zvehutsika dzinokanganisa mashandisirwo enyu acho?",
+          "confidence": 0.9,
+          "timestamp": 1755010998.316195
+        }
+      },
+      "metadata": {
+        "first_seen": 1755010998.31619,
+        "last_updated": 1755010998.3161972
+      }
+    },
+    "69f8073e19a6d4c8350dc90d61adf49a": {
+      "original_text": "12. Adaptation Over Time [NASSS: Embedding and Adaptation]",
+      "translations": {
+        "agent": {
+          "text": "12. Kuchinjika Nekufamba Kwenguva [NASSS: Kuiswa Mukati uye Kuchinjika]",
+          "confidence": 0.9,
+          "timestamp": 1755011008.335236
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011008.335233,
+        "last_updated": 1755011008.335238
+      }
+    },
+    "9f9f54b3ffbdebcacff7e99529ddc11a": {
+      "original_text": "Has your use of the CDS changed over time? If yes, how?",
+      "translations": {
+        "agent": {
+          "text": "Kushandiswa kwenyu kweCDS kwakachinja nekufamba kwenguva here? Kana hongu, kwakachinja sei?",
+          "confidence": 0.9,
+          "timestamp": 1755011016.078166
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011016.078163,
+        "last_updated": 1755011016.0781682
+      }
+    },
+    "a1fdfdbcdd6de1d3b32c705f6794c0dc": {
+      "original_text": "What changes would make the CDS more useful or sustainable in your setting?\n",
+      "translations": {
+        "agent": {
+          "text": "Ndezvipi zvigadziriso zvingaita kuti CDS iwedzere kubatsira kana kuve inoenderera mberi munzvimbo yehutano menyu?",
+          "confidence": 0.9,
+          "timestamp": 1755011031.941718
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011031.941716,
+        "last_updated": 1755011031.941719
+      }
+    },
+    "587617c694f6b6d614c08bf7ccb76e4a": {
+      "original_text": "13. Final Reflections",
+      "translations": {
+        "agent": {
+          "text": "13. Kufungisisa Kwekupedzisira",
+          "confidence": 0.9,
+          "timestamp": 1755011035.6904619
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011035.69046,
+        "last_updated": 1755011035.690463
+      }
+    },
+    "3a807dab88b4c13e9a3c44807be8d85f": {
+      "original_text": "If you could change one thing about the CDS, what would it be?",
+      "translations": {
+        "agent": {
+          "text": "Dai maikwanisa kuchinja chinhu chimwe chete nezve CDS, chingave chii?",
+          "confidence": 0.9,
+          "timestamp": 1755011051.0750778
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011051.075076,
+        "last_updated": 1755011051.07508
+      }
+    },
+    "1f0dccf08a489c06f1fb668ef6ca6eea": {
+      "original_text": "What advice would you give to someone planning to introduce this kind of tool in another clinic like yours?\n",
+      "translations": {
+        "agent": {
+          "text": "Mazano api amungapa kumunhu ari kuronga kuunza rudzi urwu rwechishandiso mune imwe kiriniki yakafanana neyenyu?",
+          "confidence": 0.9,
+          "timestamp": 1755011061.9160361
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011061.916033,
+        "last_updated": 1755011061.916037
+      }
+    },
+    "2d0211e86ab7e01326daed13da73fa7e": {
+      "original_text": "Semi-structured interview guide #2",
+      "translations": {
+        "agent": {
+          "text": "Gwara rebvunzurudzo rakarongeka zvine mwero (semi-structured) #2",
+          "confidence": 0.9,
+          "timestamp": 1755011074.4915829
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011074.491578,
+        "last_updated": 1755011074.491585
+      }
+    },
+    "e035b307b58db38082ce225e1eeed3f6": {
+      "original_text": "Objective: To understand healthcare facility senior stakeholders’ and national stakeholders’ experience of the Neotree. ",
+      "translations": {
+        "agent": {
+          "text": "Chinangwa: Kunzwisisa ruzivo rwevanobatika vakuru venzvimbo dzehutano uye vanobatika venyika pamusoro peNeotree.",
+          "confidence": 0.9,
+          "timestamp": 1755011089.866783
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011089.8667798,
+        "last_updated": 1755011089.866784
+      }
+    },
+    "e47bcd48d1c83a43cdaeb9e9966aab21": {
+      "original_text": "Participants: Facility senior stakeholders/ leadership (2 per site)",
+      "translations": {
+        "agent": {
+          "text": "Vatori vechikamu: Vane chekuita vakuru/ hutungamiri venzvimbo yehutano (2 panzvimbo imwe neimwe)",
+          "confidence": 0.9,
+          "timestamp": 1755011107.5349388
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011107.534936,
+        "last_updated": 1755011107.53494
+      }
+    },
+    "6ec18fcff548292b8e0c3162c4c0f871": {
+      "original_text": "I am interested in your views and to hear about your experiences regarding the use of Neotree and how you think it helps your staff with clinical decision support. Your opinions as a senior stakeholder at this facility is very important to us. There are no right or wrong answers to these questions, just differing points of views. Keep in mind that we're just as interested in negative comments as positive comments.",
+      "translations": {
+        "agent": {
+          "text": "Ndiri kufarira maonero enyu uye kunzwa nezveruzivo rwenyu pamusoro pekushandiswa kweNeotree uye kuti munofungei kuti rinobatsira sei vashandi venyu nerutsigiro rwesarudzo yekiriniki. Maonero enyu semubati wechikamu mukuru panzvimbo yehutano iyi akakosha zvikuru kwatiri. Hapana mhinduro dzakarurama kana dzisiri dzakarurama kumibvunzo iyi; pane kungosiyana kwemaonero chete. Rangarirai kuti tinofarira zvakafanana mashoko akanaka pamwe nemashoko anoshora.",
+          "confidence": 0.9,
+          "timestamp": 1755011161.085545
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011161.085542,
+        "last_updated": 1755011161.085546
+      }
+    },
+    "6731e96ca3d90c705b3c455accf0bbe2": {
+      "original_text": "How long have you worked as a ____ in this facility?",
+      "translations": {
+        "agent": {
+          "text": "Mave nenguva yakareba sei muchishanda semu____ munzvimbo yehutano iyi?",
+          "confidence": 0.9,
+          "timestamp": 1755011179.958844
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011179.9588401,
+        "last_updated": 1755011179.958845
+      }
+    },
+    "742cd07aba258f43297df0813f6daa80": {
+      "original_text": "2. Context and Digital Infrastructure",
+      "translations": {
+        "agent": {
+          "text": "2. Mamiriro ezvinhu uye zvivakwa zvedhijitari",
+          "confidence": 0.9,
+          "timestamp": 1755011186.984443
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011186.98444,
+        "last_updated": 1755011186.984444
+      }
+    },
+    "37055981428056260f78965c2a053294": {
+      "original_text": "Can you describe the current digital and data management systems in your facility? (e.g., DHIS2, EMRs, paper systems)",
+      "translations": {
+        "agent": {
+          "text": "Munogona kutsanangura here hurongwa hwedhijitari uye hwekutarisira data munzvimbo yehutano yenyu? (semuenzaniso, DHIS2, EMRs, hurongwa hwemapepa)",
+          "confidence": 0.9,
+          "timestamp": 1755011198.389215
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011198.389211,
+        "last_updated": 1755011198.3892171
+      }
+    },
+    "96f2500e6a0a0627e1d31e6608bbba0f": {
+      "original_text": "How do these systems support clinical care, reporting, or surveillance?",
+      "translations": {
+        "agent": {
+          "text": "Hurongwa uhu hunotsigira sei kutarisirwa kwekiriniki, kupa mishumo, kana kutarisa nekutevera (surveillance)?",
+          "confidence": 0.9,
+          "timestamp": 1755011217.515265
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011217.515262,
+        "last_updated": 1755011217.5152671
+      }
+    },
+    "a088345f01bb28f05c76226e452c266a": {
+      "original_text": "What is your understanding and experience of how Neotree fits within this digital ecosystem? Does it duplicate, complement, or conflict with existing systems?",
+      "translations": {
+        "agent": {
+          "text": "Chii chiri kunzwisisa kwenyu neruzivo rwenyu pamusoro pekuti Neotree inonyatsokwana sei mukati me ecosystem yedhijitari (digital ecosystem) iyi?\n\nInodzokorora here, inoenderana kana kuzadzisa here, kana kuti inopesana nehurongwa huripo?",
+          "confidence": 0.9,
+          "timestamp": 1755011236.487676
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011236.487673,
+        "last_updated": 1755011236.4876769
+      }
+    },
+    "fc98300561992f075b418cfa31fc546f": {
+      "original_text": "How well integrated is Neotree with facility workflows and national data platforms?",
+      "translations": {
+        "agent": {
+          "text": "Neotree yakabatanidzwa zvakadii nemukufamba webasa munzvimbo dzehutano uye nemapuratifomu (platforms) e data enyika?",
+          "confidence": 0.9,
+          "timestamp": 1755011254.931896
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011254.931892,
+        "last_updated": 1755011254.9318972
+      }
+    },
+    "38f65195177c86a1b730a27932742667": {
+      "original_text": "3. Value and Usefulness of Neotree ",
+      "translations": {
+        "agent": {
+          "text": "3. Kukosha nePundutso yeNeotree",
+          "confidence": 0.9,
+          "timestamp": 1755011266.9694772
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011266.969471,
+        "last_updated": 1755011266.969478
+      }
+    },
+    "4998b86ac933cbf5d292322db4fb8626": {
+      "original_text": "From your perspective, what value does Neotree and specifically its CDS functionality bring to the facility or clinical team?",
+      "translations": {
+        "agent": {
+          "text": "Pamaonero enyu, ndeipi kukosha kunounzwa neNeotree uye kunyanya mashandiro eCDS ayo, kune nzvimbo yehutano kana kune chikwata chekiriniki?",
+          "confidence": 0.9,
+          "timestamp": 1755011281.012715
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011281.0127108,
+        "last_updated": 1755011281.012718
+      }
+    },
+    "458bac3e02bb73a7a2d0b0128ffc4901": {
+      "original_text": "Has it led to any observable improvements in care, reporting, or decision quality?",
+      "translations": {
+        "agent": {
+          "text": "Zvakakonzera here kuti pave nekuvandudzika kunooneka mukutarisirwa kwevarwere, kupa mishumo, kana kunaka kwesarudzo?",
+          "confidence": 0.9,
+          "timestamp": 1755011302.9413812
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011302.941377,
+        "last_updated": 1755011302.941382
+      }
+    },
+    "f0d8c39cc4020e00bba730282f450507": {
+      "original_text": "Are there concerns about over-reliance, duplicative effort, or misalignment with clinical norms?",
+      "translations": {
+        "agent": {
+          "text": "Pane zvinonetsa here nezve kuvimba kwakanyanya, kudzokororwa kwebasa, kana kusawirirana nemitemo nemaitiro ekiriniki akajairwa?",
+          "confidence": 0.9,
+          "timestamp": 1755011331.385432
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011331.385427,
+        "last_updated": 1755011331.3854342
+      }
+    },
+    "507b90e4597ca2b9bf30dc8671f3a0f8": {
+      "original_text": "4. Data Use, Reporting, and Accountability ",
+      "translations": {
+        "agent": {
+          "text": "4. Kushandiswa kwe data, Kupa mishumo, uye Kuzvidavirira",
+          "confidence": 0.9,
+          "timestamp": 1755011343.991211
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011343.991206,
+        "last_updated": 1755011343.991213
+      }
+    },
+    "cbbcb1eb49a4168454499279ebcdadd9": {
+      "original_text": "What are the main data reporting requirements for your facility (e.g., MoH, district level, donor reporting)?",
+      "translations": {
+        "agent": {
+          "text": "Ndezvipi zvinodiwa zvikuru pakushuma data panzvimbo yenyu yehutano (semuenzaniso, MoH, padanho redunhu, mishumo kune vanopa mari)?",
+          "confidence": 0.9,
+          "timestamp": 1755011358.048078
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011358.0480719,
+        "last_updated": 1755011358.04808
+      }
+    },
+    "c19fb3d4d047667a3e20227bc58363ad": {
+      "original_text": "How do clinicians document and report care currently? Are digital tools like Neotree part of this workflow?",
+      "translations": {
+        "agent": {
+          "text": "Parizvino vashandi vekiriniki vanonyora uye kupa mishumo nezvekutarisira varwere sei?\nKo zvishandiso zvedhijitari zvakaita seNeotree chikamu chemukufamba webasa uyu here?",
+          "confidence": 0.9,
+          "timestamp": 1755011372.8245811
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011372.824578,
+        "last_updated": 1755011372.8245828
+      }
+    },
+    "393054d0b0fbe7ac40c2ba561796950b": {
+      "original_text": "Does Neotree help or hinder compliance with these reporting duties?",
+      "translations": {
+        "agent": {
+          "text": "Neotree inobatsira here kana kuti inoomesa kutevedzera zvisungo zvekumhan’ara mishumo izvi?",
+          "confidence": 0.9,
+          "timestamp": 1755011380.552117
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011380.552114,
+        "last_updated": 1755011380.552119
+      }
+    },
+    "b5e62bc1b6f806a7e3a29b69a6159591": {
+      "original_text": "Are there incentives—formal or informal—for health workers to enter data accurately or use the system?",
+      "translations": {
+        "agent": {
+          "text": "Pane zvikurudziro—zvemutemo kana zvisiri zvemutemo—kune vashandi vehutano kuti vapinze data zvakarurama kana kushandisa hurongwa here?",
+          "confidence": 0.9,
+          "timestamp": 1755011389.865101
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011389.865097,
+        "last_updated": 1755011389.865103
+      }
+    },
+    "a2cf6effa52446427bbb6089508993be": {
+      "original_text": "5. Workload, Staffing, and Incentives",
+      "translations": {
+        "agent": {
+          "text": "5. Mutoro webasa, huwandu hwevashandi, uye zvikurudziro",
+          "confidence": 0.9,
+          "timestamp": 1755011398.817143
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011398.8171399,
+        "last_updated": 1755011398.817145
+      }
+    },
+    "dd7a63cd974ca5087fffc1c2e2708676": {
+      "original_text": "How has the introduction of Neotree affected clinical or documentation workload?",
+      "translations": {
+        "agent": {
+          "text": "Kuunzwa kweNeotree kwakanganisa sei mutoro webasa rekiriniki kana rekunyora magwaro?",
+          "confidence": 0.9,
+          "timestamp": 1755011807.366836
+        }
+      },
+      "metadata": {
+        "first_seen": 1755011807.366832,
+        "last_updated": 1755011807.366837
+      }
     }
   },
   "stats": {
-    "hits": 14,
-    "misses": 19,
-    "total_requests": 33
+    "hits": 42,
+    "misses": 186,
+    "total_requests": 228
   }
 }
