@@ -1,0 +1,305 @@
+{
+  "cache": {
+    "e7ecb921b4b40fe10aaaed2a132c698d": {
+      "original_text": "Observation guide #1",
+      "translations": {
+        "agent": {
+          "text": "Gwara rekucherechedza #1",
+          "confidence": 0.8,
+          "timestamp": 1755007565.367745
+        },
+        "glossary": {
+          "text": "kucherechedza gwara #1",
+          "confidence": 1.0,
+          "timestamp": 1755007565.368646
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007565.367742,
+        "last_updated": 1755007565.3686469
+      }
+    },
+    "e15e92d6853fcd9fb0e7b3ffff92c8a2": {
+      "original_text": "Objective: To understand the typical workflow of a healthcare worker through the neonatal ward, what data are used and relevant in clinical decision making, and how Neotree’s clinical decision support functionality is used for delivering care. ",
+      "translations": {
+        "agent": {
+          "text": "Chinangwa: Kukumbira kuziva mukufamba webasa kwemushandi wehutano pachipatara chevana vachangoberekwa, data dzinowanikwa uye dzinoda mukurudzira maitiro ekiriniki, uye zviri kutarisirwa nekushandiswa kwehurongwa hwesupport yekurutsigiro rwesarudzo reNeotree kushandisa kurapwa.",
+          "confidence": 0.8,
+          "timestamp": 1755007567.500038
+        },
+        "glossary": {
+          "text": "chinangwa: To understand the typical mukufamba webasa of a hutano worker through the vana vachangoberekwa wadhi, what data are used and relevant in kiriniki decision making, and how Neotree’s rutsigiro rwesarudzo yekiriniki functionality is used for delivering care. ",
+          "confidence": 1.0,
+          "timestamp": 1755007567.501057
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007567.500034,
+        "last_updated": 1755007567.501058
+      }
+    },
+    "ba7728ce0bda8ff42aab587e360b24db": {
+      "original_text": "Sites: Sally Mugabe Central Hospital; Chinhoyi Provincial Hospital; Kamuzu Central Hospital; Kasungu District Hospital ",
+      "translations": {
+        "agent": {
+          "text": "Nzvimbo: Chipatara cheSally Mugabe; Chipatara cheChinhoyi Provincial; Chipatara cheKamuzu Central; Chipatara cheKasungu District",
+          "confidence": 0.8,
+          "timestamp": 1755007568.675125
+        },
+        "glossary": {
+          "text": "nzvimbo: Sally Mugabe Central chipatara; Chinhoyi Provincial chipatara; Kamuzu Central chipatara; Kasungu District chipatara ",
+          "confidence": 1.0,
+          "timestamp": 1755007568.67627
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007568.675122,
+        "last_updated": 1755007568.6762712
+      }
+    },
+    "184b7689f03952fdc1d3bc60a0001db4": {
+      "original_text": "Participants: Healthcare workers",
+      "translations": {
+        "agent": {
+          "text": "Vatori vechikamu: Vashandi vehutano",
+          "confidence": 0.8,
+          "timestamp": 1755007569.431008
+        },
+        "glossary": {
+          "text": "vatori vechikamu: vashandi vehutano",
+          "confidence": 1.0,
+          "timestamp": 1755007569.431447
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007569.431006,
+        "last_updated": 1755007569.431448
+      }
+    },
+    "2acc1bbb89557c0b590736db8c68d4c8": {
+      "original_text": "Methodology: Non-participant observation",
+      "translations": {
+        "agent": {
+          "text": "Maitiro: Kucherechedza kwevanhu vasingade kushandura",
+          "confidence": 0.8,
+          "timestamp": 1755007571.4896052
+        },
+        "glossary": {
+          "text": "maitiro: Non-participant kucherechedza",
+          "confidence": 1.0,
+          "timestamp": 1755007571.4909189
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007571.489602,
+        "last_updated": 1755007571.490921
+      }
+    },
+    "6ff269903dbdb45f43c5a38bda328581": {
+      "original_text": "Duration: 2 weeks per site (across day and night, week and weekend)",
+      "translations": {
+        "agent": {
+          "text": "Nguva: 2 maitiro kunze kwechipatara (mazuva nemagore, mupfu nezuva remasikati)",
+          "confidence": 0.8,
+          "timestamp": 1755007572.202538
+        },
+        "glossary": {
+          "text": "nguva: 2 weeks per site (across day and night, week and weekend)",
+          "confidence": 1.0,
+          "timestamp": 1755007572.203698
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007572.202503,
+        "last_updated": 1755007572.2037
+      }
+    },
+    "527b2df0294d0eb6396b965f25637753": {
+      "original_text": "Version: 1.0",
+      "translations": {
+        "agent": {
+          "text": "Shanduko: 1.0",
+          "confidence": 0.9,
+          "timestamp": 1755007822.2563741
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007822.2563698,
+        "last_updated": 1755007822.2563741
+      }
+    },
+    "b8427b381be87d836ab1af42fe2cf375": {
+      "original_text": "1. Context of use",
+      "translations": {
+        "agent": {
+          "text": "1. Mamiriro ekushandiswa",
+          "confidence": 0.9,
+          "timestamp": 1755007827.339509
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007827.3395069,
+        "last_updated": 1755007827.3395112
+      }
+    },
+    "024ee43dda8462cca067a23658d6476b": {
+      "original_text": "Type of clinical encounter (e.g., emergency care, initial screening, routine review)",
+      "translations": {
+        "agent": {
+          "text": "Rudzi rwekusangana kwekiriniki (semuenzaniso, kutarisirwa kwechimbichimbi, kuongororwa kwekutanga, kuongororwa kwenguva nenguva)",
+          "confidence": 0.9,
+          "timestamp": 1755007896.8299851
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007896.829979,
+        "last_updated": 1755007896.829986
+      }
+    },
+    "d77473201f5197a19a779381f1047242": {
+      "original_text": "Who is delivering care and how many people (e.g., doctor, nurse, midwife)",
+      "translations": {
+        "agent": {
+          "text": "Ndiani ari kupa rubatsiro rwehutano uye vanhu vangani (semuenzaniso, chiremba, mukoti, nyamukuta)",
+          "confidence": 0.9,
+          "timestamp": 1755007903.150114
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007903.150111,
+        "last_updated": 1755007903.150115
+      }
+    },
+    "4a011663c4cc3e0bb6be01ef1dd662f6": {
+      "original_text": "Place of observation (e.g., labour ward, NICU or NNU), and is it quiet or busy",
+      "translations": {
+        "agent": {
+          "text": "Nzvimbo yekucherechedza (semuenzaniso, wadhi rekuzvara, NICU kana NNU), uye yakanyarara here kana kuti yakabatikana",
+          "confidence": 0.9,
+          "timestamp": 1755007908.595205
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007908.5952,
+        "last_updated": 1755007908.595207
+      }
+    },
+    "0ba2312ba4b398430f9b308e11473b0e": {
+      "original_text": "What infrastructure/ equipment is available",
+      "translations": {
+        "agent": {
+          "text": "Ndezvipi zvivakwa/midziyo zviripo?",
+          "confidence": 0.9,
+          "timestamp": 1755007925.53549
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007925.535489,
+        "last_updated": 1755007925.535491
+      }
+    },
+    "424fe1cf565246480ce96bcd51aca3c6": {
+      "original_text": "Patient demographics",
+      "translations": {
+        "agent": {
+          "text": "Ruzivo rwevanhu rwemurwere",
+          "confidence": 0.9,
+          "timestamp": 1755007933.747663
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007933.74766,
+        "last_updated": 1755007933.747664
+      }
+    },
+    "23382f766e815e7dcf68fb93ac82bae4": {
+      "original_text": "Clinical features of the baby (e.g., pre-term baby)",
+      "translations": {
+        "agent": {
+          "text": "Zvinoratidza zvekiriniki zvemwana (semuenzaniso, mwana asati asvika nguva)",
+          "confidence": 0.9,
+          "timestamp": 1755007955.407876
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007955.407874,
+        "last_updated": 1755007955.407878
+      }
+    },
+    "783f8b17a82337e68d77785b924797e1": {
+      "original_text": "Anything else?",
+      "translations": {
+        "agent": {
+          "text": "Pane chimwe here?",
+          "confidence": 0.9,
+          "timestamp": 1755007960.199426
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007960.199422,
+        "last_updated": 1755007960.1994271
+      }
+    },
+    "8b08f647d4a414b7efcdbce7abe6f7eb": {
+      "original_text": "Is CDS part of routine workflow or only used selectively?",
+      "translations": {
+        "agent": {
+          "text": "CDS chikamu chemukufamba webasa kwezuva nezuva here kana kuti chinongoshandiswa chete pazviitiko zvakasarudzwa?",
+          "confidence": 0.9,
+          "timestamp": 1755007971.8779771
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007971.877975,
+        "last_updated": 1755007971.877978
+      }
+    },
+    "d36aa13e5e8bafdae0f644b8b1b20869": {
+      "original_text": "2. Interacting with Neotree",
+      "translations": {
+        "agent": {
+          "text": "2. Kudyidzana ne Neotree",
+          "confidence": 0.9,
+          "timestamp": 1755007979.421392
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007979.42139,
+        "last_updated": 1755007979.421392
+      }
+    },
+    "7396e1efef3122b07093912b2bc2a5be": {
+      "original_text": "When and how is CDS used? (e.g., at triage, mid-consultation, post-exam)",
+      "translations": {
+        "agent": {
+          "text": "CDS inoshandiswa rini uye nenzira ipi? (semuenzaniso, panguva yekupatsanura kukurumidzira (triage), pakati pekubvunzana nachiremba (consultation), mushure mekuongororwa (post-exam))",
+          "confidence": 0.9,
+          "timestamp": 1755007994.444001
+        }
+      },
+      "metadata": {
+        "first_seen": 1755007994.443997,
+        "last_updated": 1755007994.444003
+      }
+    },
+    "f61cebad5cdc6b84afc9e7814e599a19": {
+      "original_text": "How does the user navigate the system? Is the healthcare worker confused or frustrated or calm?",
+      "translations": {
+        "agent": {
+          "text": "Mushandisi anofamba sei mukati mehurongwa (navigate)?\nMushandi wehutano ari kuvhiringidzika here, ari kushungurudzika here, kana kuti akadzikama?",
+          "confidence": 0.9,
+          "timestamp": 1755008005.873306
+        }
+      },
+      "metadata": {
+        "first_seen": 1755008005.873301,
+        "last_updated": 1755008005.873308
+      }
+    }
+  },
+  "stats": {
+    "hits": 14,
+    "misses": 19,
+    "total_requests": 33
+  }
+}

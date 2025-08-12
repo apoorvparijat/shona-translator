@@ -18,6 +18,7 @@ try:
     from mymemory_translator import MyMemoryShonaTranslator
     from google_translator import GoogleShonaTranslator
     from openai_translator import OpenAIShonaTranslator
+    from agent_translator import AgentShonaTranslator
     TRANSLATORS_AVAILABLE = True
 except ImportError as e:
     print(f"❌ Error importing translators: {e}")
@@ -35,7 +36,8 @@ class ShonaTranslateCLI:
         self.translators = {
             'mymemory': MyMemoryShonaTranslator,
             'google': GoogleShonaTranslator,
-            'openai': OpenAIShonaTranslator
+            'openai': OpenAIShonaTranslator,
+            'agent': AgentShonaTranslator
         }
     
     def validate_input_file(self, file_path: str) -> bool:
@@ -178,7 +180,7 @@ Examples:
         '--method', '-m',
         default='mymemory',
         help='Translation method(s). Use comma-separated list for multiple methods. '
-             'Default: mymemory. Available: mymemory, google, openai'
+             'Default: mymemory. Available: mymemory, google, openai, agent'
     )
     
     parser.add_argument(
