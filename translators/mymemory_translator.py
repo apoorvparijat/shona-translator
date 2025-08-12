@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 class MyMemoryShonaTranslator(BaseShonaTranslator):
     """English to Shona translator using MyMemory API with shared glossary"""
     
-    def __init__(self, glossary_dir: str = "glossary"):
+    def __init__(self, glossary_dir: str = "../glossary"):
         super().__init__(glossary_dir)
         
         # MyMemory API

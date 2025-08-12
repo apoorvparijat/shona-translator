@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 class GlossaryManager:
     """Manages deterministic translations and abbreviations from CSV files"""
     
-    def __init__(self, glossary_dir: str = "glossary"):
+    def __init__(self, glossary_dir: str = "../glossary"):
         self.glossary_dir = glossary_dir
         self.medical_technical_glossary: Dict[str, str] = {}
         self.phrase_translations: Dict[str, str] = {}

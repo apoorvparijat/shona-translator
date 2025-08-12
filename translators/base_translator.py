@@ -16,12 +16,12 @@ logger = logging.getLogger(__name__)
 class BaseShonaTranslator:
     """Base class for all Shona translators with common functionality"""
     
-    def __init__(self, glossary_dir: str = "glossary"):
+    def __init__(self, glossary_dir: str = "../glossary"):
         self.glossary_manager = GlossaryManager(glossary_dir)
         logger.info("Base translator initialized with glossary manager")
     
     def get_best_translation(self, text: str) -> str:
-        """Get the best translation using glossary-first approach"""
+        """Get the best translation using glossary-first approach with fallback to API"""
         if not text.strip():
             return text
         
@@ -29,21 +29,48 @@ class BaseShonaTranslator:
         if len(text.strip()) < 2 or re.match(r'^[\d\s\W]+$', text.strip()):
             return text
         
-        # 1. Try glossary first (highest priority)
+        # 1. Try glossary first
         glossary_translation = self.glossary_manager.translate_with_glossary(text)
-        if glossary_translation and glossary_translation != text:
-            logger.info(f"Glossary: '{text}' -> '{glossary_translation}'")
-            return self.glossary_manager.post_process_translation(glossary_translation)
         
-        # 2. Try API-specific translation (to be implemented by subclasses)
+        # 2. Try API-specific translation
         api_translation = self._translate_with_api(text)
-        if api_translation and api_translation != text and api_translation.strip():
+        
+        # 3. Choose the best translation
+        if glossary_translation and glossary_translation != text:
+            if api_translation and api_translation != text and api_translation.strip():
+                # Both glossary and API provided translations
+                # Choose the one that translates more of the text
+                glossary_english_words = self._count_english_words(glossary_translation)
+                api_english_words = self._count_english_words(api_translation)
+                
+                if api_english_words < glossary_english_words:
+                    # API translation is more complete
+                    logger.info(f"API (chosen): '{text}' -> '{api_translation}'")
+                    return self.glossary_manager.post_process_translation(api_translation)
+                else:
+                    # Glossary translation is more complete or equal
+                    logger.info(f"Glossary (chosen): '{text}' -> '{glossary_translation}'")
+                    return self.glossary_manager.post_process_translation(glossary_translation)
+            else:
+                # Only glossary provided translation
+                logger.info(f"Glossary: '{text}' -> '{glossary_translation}'")
+                return self.glossary_manager.post_process_translation(glossary_translation)
+        elif api_translation and api_translation != text and api_translation.strip():
+            # Only API provided translation
             logger.info(f"API: '{text}' -> '{api_translation}'")
             return self.glossary_manager.post_process_translation(api_translation)
         
-        # 3. If no translation found, return original
+        # 4. If no translation found, return original
         logger.warning(f"No translation found for: {text}")
         return text
+    
+    def _count_english_words(self, text: str) -> int:
+        """Count English words in text to determine translation completeness"""
+        import re
+        # Simple heuristic: count words that look like English
+        english_pattern = r'\b[a-zA-Z]{2,}\b'
+        english_words = re.findall(english_pattern, text)
+        return len(english_words)
     
     def _translate_with_api(self, text: str) -> Optional[str]:
         """Translate text using the specific API (to be implemented by subclasses)"""

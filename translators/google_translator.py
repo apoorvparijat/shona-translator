@@ -31,7 +31,7 @@ except (ImportError, AttributeError) as e:
 class GoogleShonaTranslator(BaseShonaTranslator):
     """English to Shona translator using Google Translate API with shared glossary"""
     
-    def __init__(self, glossary_dir: str = "glossary"):
+    def __init__(self, glossary_dir: str = "../glossary"):
         super().__init__(glossary_dir)
         
         if not GOOGLE_AVAILABLE:
@@ -55,10 +55,10 @@ class GoogleShonaTranslator(BaseShonaTranslator):
             # Preprocess the text using shared glossary manager
             processed_text = self.glossary_manager.preprocess_text(text)
             
-            # Google Translate API call
+            # Google Translate API call (synchronous)
             result = self.translator.translate(processed_text, src='en', dest='sn')
             
-            if result and result.text and result.text.strip():
+            if result and hasattr(result, 'text') and result.text and result.text.strip():
                 translated_text = result.text.strip()
                 if translated_text != text:
                     logger.info(f"Google: '{text[:50]}...' -> '{translated_text[:50]}...'")
@@ -73,8 +73,6 @@ class GoogleShonaTranslator(BaseShonaTranslator):
         except Exception as e:
             logger.error(f"Google Translate API error: {e}")
             return None
-    
-
     
     def _get_rate_limit_delay(self) -> float:
         """Get the rate limit delay for Google Translate API"""

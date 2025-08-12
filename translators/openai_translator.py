@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 class OpenAIShonaTranslator(BaseShonaTranslator):
     """English to Shona translator using OpenAI GPT models with shared glossary"""
     
-    def __init__(self, glossary_dir: str = "glossary"):
+    def __init__(self, glossary_dir: str = "../glossary"):
         super().__init__(glossary_dir)
         
         self.client = None
