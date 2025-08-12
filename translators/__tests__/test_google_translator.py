@@ -36,7 +36,7 @@ class TestGoogleShonaTranslator(unittest.TestCase):
     
     def test_google_translator_initialization(self):
         """Test that GoogleShonaTranslator initializes correctly"""
-        with patch('googletrans.Translator') as mock_translator_class:
+        with patch('google_translator.Translator') as mock_translator_class:
             mock_translator = Mock()
             mock_translator_class.return_value = mock_translator
             
@@ -65,7 +65,7 @@ class TestGoogleShonaTranslator(unittest.TestCase):
     
     def test_translate_text_success(self):
         """Test successful translation via Google Translate"""
-        with patch('googletrans.Translator') as mock_translator_class:
+        with patch('google_translator.Translator') as mock_translator_class:
             # Mock successful translation
             mock_translator = Mock()
             mock_result = Mock()
@@ -81,7 +81,7 @@ class TestGoogleShonaTranslator(unittest.TestCase):
     
     def test_get_best_translation_with_api_only(self):
         """Test that API translation is used when glossary doesn't have the term"""
-        with patch('googletrans.Translator') as mock_translator_class:
+        with patch('google_translator.Translator') as mock_translator_class:
             # Mock successful translation
             mock_translator = Mock()
             mock_result = Mock()
@@ -99,7 +99,7 @@ class TestGoogleShonaTranslator(unittest.TestCase):
     
     def test_translate_text_translation_error(self):
         """Test handling of translation errors"""
-        with patch('googletrans.Translator') as mock_translator_class:
+        with patch('google_translator.Translator') as mock_translator_class:
             # Mock translation error
             mock_translator = Mock()
             mock_translator.translate.side_effect = Exception("Translation failed")
@@ -113,7 +113,7 @@ class TestGoogleShonaTranslator(unittest.TestCase):
     
     def test_get_best_translation_with_api_error(self):
         """Test that API errors are handled correctly in get_best_translation"""
-        with patch('googletrans.Translator') as mock_translator_class:
+        with patch('google_translator.Translator') as mock_translator_class:
             # Mock translation error
             mock_translator = Mock()
             mock_translator.translate.side_effect = Exception("Translation failed")
@@ -128,7 +128,7 @@ class TestGoogleShonaTranslator(unittest.TestCase):
     
     def test_translate_text_initialization_error(self):
         """Test handling of translator initialization errors"""
-        with patch('googletrans.Translator') as mock_translator_class:
+        with patch('google_translator.Translator') as mock_translator_class:
             # Mock initialization error
             mock_translator_class.side_effect = Exception("Initialization failed")
             
