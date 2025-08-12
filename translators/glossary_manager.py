@@ -334,8 +334,8 @@ class GlossaryManager:
         sorted_abbrevs = sorted(self.abbreviations.items(), key=lambda x: len(x[0]), reverse=True)
         
         for abbrev, expansion in sorted_abbrevs:
-            # Skip if this abbreviation is in exclusion list
-            if abbrev.lower() in self.exclusion_list:
+            # Only skip if this abbreviation is in exclusion list AND it's the entire text
+            if abbrev.lower() in self.exclusion_list and text.lower().strip() == abbrev.lower():
                 continue
                 
             pattern = r'\b' + re.escape(abbrev) + r'\b'

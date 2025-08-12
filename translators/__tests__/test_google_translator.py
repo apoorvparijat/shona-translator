@@ -152,7 +152,7 @@ class TestGoogleShonaTranslator(unittest.TestCase):
     
     def test_empty_text_handling(self):
         """Test handling of empty text"""
-        with patch('googletrans.Translator') as mock_translator_class:
+        with patch('google_translator.Translator') as mock_translator_class:
             mock_translator = Mock()
             mock_translator_class.return_value = mock_translator
             
@@ -165,7 +165,7 @@ class TestGoogleShonaTranslator(unittest.TestCase):
     
     def test_language_detection(self):
         """Test that the translator uses correct language codes"""
-        with patch('googletrans.Translator') as mock_translator_class:
+        with patch('google_translator.Translator') as mock_translator_class:
             mock_translator = Mock()
             mock_translator_class.return_value = mock_translator
             

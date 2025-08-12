@@ -81,6 +81,7 @@ class ShonaTranslateCLI:
             print(f"📊 Translator: {info['translator_type']}")
             print(f"📊 Rate limit: {info['rate_limit_delay']}s")
             print(f"📊 Glossary terms: {info['glossary_stats']['medical_technical_terms']}")
+            print(f"📊 Cache stats: {info['cache_stats']['hit_rate']}% hit rate ({info['cache_stats']['hits']}/{info['cache_stats']['total_requests']})")
             
             # Perform translation
             success = translator.translate_docx(input_file, output_file)

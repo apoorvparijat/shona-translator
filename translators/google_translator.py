@@ -58,13 +58,21 @@ class GoogleShonaTranslator(BaseShonaTranslator):
             # Google Translate API call (synchronous)
             result = self.translator.translate(processed_text, src='en', dest='sn')
             
-            if result and hasattr(result, 'text') and result.text and result.text.strip():
+            # Check if result exists and has valid text
+            if result and hasattr(result, 'text') and result.text:
                 translated_text = result.text.strip()
-                if translated_text != text:
-                    logger.info(f"Google: '{text[:50]}...' -> '{translated_text[:50]}...'")
-                    return translated_text
+                
+                # Validate the translation
+                if translated_text and translated_text != processed_text:
+                    # Additional validation: check if translation is not just empty or whitespace
+                    if len(translated_text) > 0 and not translated_text.isspace():
+                        logger.info(f"Google: '{text[:50]}...' -> '{translated_text[:50]}...'")
+                        return translated_text
+                    else:
+                        logger.warning(f"Google returned empty/whitespace translation for: {text[:50]}...")
+                        return None
                 else:
-                    logger.warning(f"Google returned same text for: {text[:50]}...")
+                    logger.warning(f"Google returned same text or empty for: {text[:50]}...")
                     return None
             else:
                 logger.warning(f"Google returned empty translation for: {text[:50]}...")

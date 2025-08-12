@@ -97,11 +97,17 @@ Translate the following text from English to Shona:"""
             
             translated_text = response.choices[0].message.content.strip()
             
-            if translated_text and translated_text != text:
-                logger.info(f"OpenAI: '{text[:50]}...' -> '{translated_text[:50]}...'")
-                return translated_text
+            # Validate the translation
+            if translated_text and translated_text != processed_text:
+                # Additional validation: check if translation is not just empty or whitespace
+                if len(translated_text) > 0 and not translated_text.isspace():
+                    logger.info(f"OpenAI: '{text[:50]}...' -> '{translated_text[:50]}...'")
+                    return translated_text
+                else:
+                    logger.warning(f"OpenAI returned empty/whitespace translation for: {text[:50]}...")
+                    return None
             else:
-                logger.warning(f"OpenAI returned same text for: {text[:50]}...")
+                logger.warning(f"OpenAI returned same text or empty for: {text[:50]}...")
                 return None
                 
         except Exception as e:
