@@ -115,7 +115,9 @@ class GoogleShonaTranslator(BaseShonaTranslator):
                 return None
                 
         except Exception as e:
-            logger.error(f"Google Translate API error for text '{text[:100]}...': {e}")
+            # Handle None text safely
+            text_preview = text[:100] if text else "None"
+            logger.error(f"Google Translate API error for text '{text_preview}...': {e}")
             logger.error(f"Error type: {type(e)}")
             logger.error(f"Error details: {str(e)}")
             

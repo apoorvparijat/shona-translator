@@ -32,6 +32,11 @@ class TestGlossaryBug(unittest.TestCase):
         
         # Create a test glossary with some terms
         self._create_test_glossary()
+        
+        # Clear the translation cache to ensure clean test state
+        from translation_cache import get_translation_cache
+        cache = get_translation_cache()
+        cache.clear_cache()
     
     def tearDown(self):
         """Clean up after each test method"""

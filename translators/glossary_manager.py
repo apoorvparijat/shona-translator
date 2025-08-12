@@ -17,7 +17,6 @@ class GlossaryManager:
     def __init__(self, glossary_dir: str = "../glossary"):
         self.glossary_dir = glossary_dir
         self.medical_technical_glossary: Dict[str, str] = {}
-        self.phrase_translations: Dict[str, str] = {}
         self.abbreviations: Dict[str, str] = {}
         self.post_processing_corrections: Dict[str, str] = {}
         self.exclusion_list: set = set()
@@ -26,7 +25,7 @@ class GlossaryManager:
         self._load_glossary_data()
         
         logger.info(f"GlossaryManager initialized with {len(self.medical_technical_glossary)} terms, "
-                   f"{len(self.phrase_translations)} phrases, {len(self.abbreviations)} abbreviations, "
+                   f"{len(self.abbreviations)} abbreviations, "
                    f"{len(self.exclusion_list)} exclusions")
     
     def _load_glossary_data(self):
@@ -36,7 +35,6 @@ class GlossaryManager:
         
         # Load different types of glossary data
         self._load_medical_technical_glossary()
-        self._load_phrase_translations()
         self._load_abbreviations()
         self._load_post_processing_corrections()
         self._load_exclusion_list()
@@ -61,26 +59,7 @@ class GlossaryManager:
         except Exception as e:
             logger.error(f"Error loading medical/technical glossary: {e}")
     
-    def _load_phrase_translations(self):
-        """Load phrase translations from CSV"""
-        csv_file = os.path.join(self.glossary_dir, "phrase_translations.csv")
-        
-        if not os.path.exists(csv_file):
-            # Create default file with common phrases
-            self._create_default_phrase_csv(csv_file)
-        
-        try:
-            with open(csv_file, 'r', encoding='utf-8') as f:
-                reader = csv.DictReader(f)
-                for row in reader:
-                    english = row.get('english', '').strip().lower()
-                    shona = row.get('shona', '').strip()
-                    if english and shona:
-                        self.phrase_translations[english] = shona
-            logger.info(f"Loaded {len(self.phrase_translations)} phrase translations")
-        except Exception as e:
-            logger.error(f"Error loading phrase translations: {e}")
-    
+
     def _load_abbreviations(self):
         """Load abbreviations from CSV"""
         csv_file = os.path.join(self.glossary_dir, "abbreviations.csv")
@@ -228,27 +207,7 @@ class GlossaryManager:
         
         logger.info(f"Created default medical/technical terms CSV: {csv_file}")
     
-    def _create_default_phrase_csv(self, csv_file: str):
-        """Create default phrase translations CSV"""
-        default_phrases = [
-            {'english': 'what is your name', 'shona': 'zita rako ndiani', 'category': 'conversation'},
-            {'english': 'how are you', 'shona': 'makadii', 'category': 'conversation'},
-            {'english': 'i am fine', 'shona': 'ndiri right', 'category': 'conversation'},
-            {'english': 'thank you very much', 'shona': 'ndatenda zvikuru', 'category': 'conversation'},
-            {'english': 'please help me', 'shona': 'ndibatsireiwo', 'category': 'conversation'},
-            {'english': 'good morning', 'shona': 'mangwanani akanaka', 'category': 'greeting'},
-            {'english': 'clinical decision support system', 'shona': 'hurongwa hwekutsigira sarudzo dzekiriniki', 'category': 'medical'},
-            {'english': 'healthcare workers', 'shona': 'vashandi vehutano', 'category': 'medical'},
-            {'english': 'focus group discussion', 'shona': 'nhaurirano yeboka rekutarisa', 'category': 'research'}
-        ]
-        
-        with open(csv_file, 'w', newline='', encoding='utf-8') as f:
-            writer = csv.DictWriter(f, fieldnames=['english', 'shona', 'category'])
-            writer.writeheader()
-            writer.writerows(default_phrases)
-        
-        logger.info(f"Created default phrase translations CSV: {csv_file}")
-    
+
     def _create_default_abbreviations_csv(self, csv_file: str):
         """Create default abbreviations CSV"""
         default_abbrevs = [
@@ -328,6 +287,10 @@ class GlossaryManager:
     
     def preprocess_text(self, text: str) -> str:
         """Preprocess text to handle abbreviations"""
+        # Handle None or empty text
+        if text is None:
+            return ""
+        
         result = text
         
         # Sort abbreviations by length (longest first) to avoid partial replacements
@@ -351,10 +314,6 @@ class GlossaryManager:
         if text_lower in self.exclusion_list:
             logger.info(f"Excluded from translation: '{text}'")
             return None
-        
-        # Check for exact phrase matches first
-        if text_lower in self.phrase_translations:
-            return self.phrase_translations[text_lower]
         
         # Check for exact word matches
         if text_lower in self.medical_technical_glossary:
@@ -399,7 +358,6 @@ class GlossaryManager:
         """Get statistics about loaded glossary data"""
         return {
             'medical_technical_terms': len(self.medical_technical_glossary),
-            'phrase_translations': len(self.phrase_translations),
             'abbreviations': len(self.abbreviations),
             'post_processing_corrections': len(self.post_processing_corrections),
             'exclusion_list': len(self.exclusion_list)
