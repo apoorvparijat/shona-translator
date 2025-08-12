@@ -74,7 +74,7 @@ class TestGoogleShonaTranslator(unittest.TestCase):
             mock_translator_class.return_value = mock_translator
             
             translator = GoogleShonaTranslator()
-            result = translator._translate_with_api("Good")
+            result = translator._translate_with_api("Excellent")
             
             self.assertEqual(result, "Zvakanaka")
             mock_translator.translate.assert_called_once()
@@ -106,7 +106,7 @@ class TestGoogleShonaTranslator(unittest.TestCase):
             mock_translator_class.return_value = mock_translator
             
             translator = GoogleShonaTranslator()
-            result = translator._translate_with_api("Good")
+            result = translator._translate_with_api("Excellent")
             
             # Should return None when translation fails
             self.assertIsNone(result)
@@ -121,10 +121,10 @@ class TestGoogleShonaTranslator(unittest.TestCase):
             
             translator = GoogleShonaTranslator()
             # Test with a term that's not in the glossary
-            result = translator.get_best_translation("Good")
+            result = translator.get_best_translation("Excellent")
             
             # Should return original text when API fails and glossary doesn't have it
-            self.assertEqual(result, "Good")
+            self.assertEqual(result, "Excellent")
     
     def test_translate_text_initialization_error(self):
         """Test handling of translator initialization errors"""
