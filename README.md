@@ -6,6 +6,10 @@ A high-accuracy English to Shona DOCX translation tool that preserves document f
 
 ## Quick Start
 
+### Requirements
+
+- Python 3.10 or higher
+
 ### Setup (one-time)
 
 ```bash
